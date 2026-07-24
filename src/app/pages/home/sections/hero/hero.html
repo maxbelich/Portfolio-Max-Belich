@@ -1,3 +1,16 @@
-<p>hero works!</p>
-<app-button [label]="'Check my work'" [target]="'featured-projects'"></app-button>
-<app-button [label]="'Contact me'" [target]="'contact'"></app-button>
+<section class="hero">
+  <div class="hero__content">
+    <p class="hero__eyebrow">Fullstack Developer</p>
+    <h1 class="hero__name">Max Belich</h1>
+    <div class="hero__buttons">
+      <app-button [label]="'Check my work'" [target]="'featured-projects'"></app-button>
+      <app-button [label]="'Contact me'" [target]="'contact'"></app-button>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <a href="#about-me" class="hero__scroll-circle" aria-label="Nach unten scrollen">
+      <img src="/icons/ui/arrow-left.svg" alt="" class="hero__scroll-arrow" />
+    </a>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
