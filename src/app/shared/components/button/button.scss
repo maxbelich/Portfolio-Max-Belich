@@ -1,0 +1,14 @@
+@use 'index' as *;
+
+.button{
+    background: transparent;
+    border-radius: 999px;
+    border: 1px solid;
+    padding: rem(13) rem(24);
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: rem(18);
+    border-color: $color-base;
+    color: $color-base;
+    text-decoration: none;
+}
