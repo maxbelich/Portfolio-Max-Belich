@@ -1,3 +1,6 @@
+@use 'base';
+@use 'fonts';
+
 body {
   cursor: url('/icons/ui/custom-cursor.svg') 16 16, url('/icons/ui/custom-cursor.png') 16 16, auto;
 }
