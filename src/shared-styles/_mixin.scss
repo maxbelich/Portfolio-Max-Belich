@@ -1,5 +1,17 @@
 @use 'sass:math';
+@use 'sass:map';
+@use 'variables' as *;
 
 @function rem($value) {
   @return math.div($value, 16) * 1rem;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unbekannter Breakpoint: #{$breakpoint}";
+  }
 }

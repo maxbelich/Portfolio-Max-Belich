@@ -7,3 +7,7 @@ $color-accent10: rgba($color-accent, 0.1);
 $color-base: #ffffff;
 $color-base80: rgba($color-base, 0.8);
 $color-hero: #d9d9d9;
+
+$breakpoints: (
+  widescreen: 1440px,
+);
