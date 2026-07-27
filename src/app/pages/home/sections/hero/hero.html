@@ -1,16 +1,56 @@
 <section class="hero">
-  <div class="hero__content">
-    <p class="hero__eyebrow">Fullstack Developer</p>
-    <h1 class="hero__name">Max Belich</h1>
-    <div class="hero__buttons">
-      <app-button [label]="'Check my work'" [target]="'featured-projects'"></app-button>
-      <app-button [label]="'Contact me'" [target]="'contact'"></app-button>
+  <div class="hero__inner">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Fullstack Developer</p>
+      <h1 class="hero__name">Max Belich</h1>
+      <div class="hero__buttons">
+        <app-button [label]="'Check my work'" [target]="'featured-projects'"></app-button>
+        <app-button [label]="'Contact me'" [target]="'contact'"></app-button>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <a href="#about-me" class="hero__scroll-circle" aria-label="Nach unten scrollen">
+        <img src="/icons/ui/arrow-left.svg" alt="Bouncing Arrow" class="hero__scroll-arrow" />
+      </a>
+      <span class="hero__scroll-line"></span>
+    </div>
+    <div class="hero__social">
+      <a href="mailto:maxbelich@web.de" class="hero__social-email">maxbelich@web.de</a>
+      <div class="hero__social-links">
+        <a
+          href="https://github.com/maxbelich"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="hero__social-link"
+        >
+          <span class="hero__social-icon hero__social-icon--github"></span>
+          <span class="hero__social-dot"></span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/max-belich-6b844b424/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="hero__social-link"
+        >
+          <span class="hero__social-icon hero__social-icon--linkedin"></span>
+          <span class="hero__social-dot"></span>
+        </a>
+      </div>
+      <span class="hero__social-line"></span>
     </div>
   </div>
-  <div class="hero__scroll">
-    <a href="#about-me" class="hero__scroll-circle" aria-label="Nach unten scrollen">
-      <img src="/icons/ui/arrow-left.svg" alt="" class="hero__scroll-arrow" />
-    </a>
-    <span class="hero__scroll-line"></span>
+  <div class="hero__banner">
+    <div class="hero__banner-track">
+      @for (group of bannerGroups; track group) {
+        @for (phrase of bannerPhrases; track phrase) {
+          <span class="hero__banner-item" [attr.aria-hidden]="group === 0 ? null : true">{{
+            phrase
+          }}</span>
+          <span class="hero__banner-dot" [attr.aria-hidden]="group === 0 ? null : true">•</span>
+        }
+      }
+    </div>
   </div>
 </section>

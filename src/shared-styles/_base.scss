@@ -13,8 +13,6 @@
   }
 }
 body {
-  /* 4. Increase line-height */
-  line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
@@ -43,4 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 */
 app-root {
   isolation: isolate;
+}
+
+/* 11. Remove default link styling */
+a {
+  text-decoration: none;
+  cursor: pointer;
 }

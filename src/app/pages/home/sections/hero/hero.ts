@@ -7,4 +7,13 @@ import { Button } from '../../../../shared/components/button/button';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero {}
+export class Hero {
+  readonly bannerPhrases = [
+    'Available for remote work',
+    'Frontend Developer',
+    'Based in Stuttgart',
+    'Open to work',
+  ];
+
+  readonly bannerGroups = [0, 1, 2, 3];
+}
