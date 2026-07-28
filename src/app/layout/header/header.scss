@@ -1,7 +1,205 @@
+@use 'index' as *;
+
 :host {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
+}
+
+.header {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+
+  @include respond-to('widescreen') {
+    background: none;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 1440px;
+    height: rem(98);
+    margin: 0 auto;
+    padding-inline: rem(96);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: rem(48);
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: rem(16);
+    color: $color-base;
+    text-decoration: none;
+
+    position: relative;
+
+    &:active {
+      color: $color-accent;
+      transition: color 125ms ease;
+    }
+  }
+
+  &__nav-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: rem(8);
+    height: rem(8);
+    border-radius: 50%;
+    background: $color-accent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__nav-link:hover &__nav-dot {
+    opacity: 1;
+  }
+
+  &__logo {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: rem(20);
+    color: $color-base;
+    text-decoration: none;
+  }
+
+  &__lang-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: rem(72);
+    height: rem(28);
+    border-radius: rem(14);
+    background: $color-accent10;
+    box-shadow: inset 0 0 0 rem(1) $color-accent;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__lang-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &__lang-knob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: rem(14);
+    background: $color-accent;
+    transition: transform 0.3s ease;
+  }
+
+  &__lang-option {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+    font-family: 'Fira Code';
+    font-weight: 500;
+    font-size: rem(13);
+    transition: color 0.3s ease;
+  }
+
+  &__lang-option--en {
+    color: $color-gradient-black;
+  }
+
+  &__lang-option--de {
+    color: $color-base80;
+  }
+
+  &__lang-input:checked ~ &__lang-knob {
+    transform: translateX(100%);
+  }
+
+  &__lang-input:checked ~ &__lang-option--en {
+    color: $color-base80;
+  }
+
+  &__lang-input:checked ~ &__lang-option--de {
+    color: $color-gradient-black;
+  }
+
+  &__logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 120px;
+  }
+
+  &__logo-mark {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &__logo-reveal {
+    position: absolute;
+    left: calc(100% + #{rem(16)});
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  &__logo-name {
+    display: inline-block;
+    overflow: hidden;
+    width: 0;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    font-size: rem(28);
+    color: $color-base;
+    transition: width 0.45s steps(3, end);
+  }
+
+  &__logo:hover &__logo-name {
+    width: 3.1ch;
+  }
+
+  &__logo-cursor {
+    display: inline-block;
+    width: rem(3);
+    height: rem(26);
+    margin-left: rem(6);
+    background: $color-accent;
+    animation: header-logo-blink 1.2s steps(1) infinite;
+  }
+}
+
+@keyframes header-logo-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

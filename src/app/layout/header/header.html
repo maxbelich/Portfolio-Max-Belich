@@ -1,1 +1,58 @@
-<p>header works!</p>
+<header class="header">
+  <div class="header__inner">
+    <div class="header__left">
+      <label class="header__lang-toggle">
+        <input type="checkbox" class="header__lang-input" />
+        <span class="header__lang-option header__lang-option--en">EN</span>
+        <span class="header__lang-option header__lang-option--de">DE</span>
+        <span class="header__lang-knob"></span>
+      </label>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li>
+            <a href="#about-me" class="header__nav-link"
+              >About me<span class="header__nav-dot"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#skills" class="header__nav-link"
+              >Skills<span class="header__nav-dot"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#featured-projects" class="header__nav-link"
+              >Projects<span class="header__nav-dot"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <a href="/" class="header__logo" aria-label="Max Belich – Home">
+      <svg class="header__logo-mark" width="52" height="52" viewBox="0 0 100 100">
+        <rect width="100" height="100" rx="24" fill="#3DCFB6" />
+        <path
+          d="M12 58 C 20 36 30 36 38 50 C 46 64 56 64 64 44"
+          fill="none"
+          stroke="#0B0F0E"
+          stroke-width="9"
+          stroke-linecap="round"
+        />
+        <line
+          x1="66"
+          y1="82"
+          x2="90"
+          y2="20"
+          stroke="#0B0F0E"
+          stroke-width="9"
+          stroke-linecap="round"
+        />
+      </svg>
+      <span class="header__logo-reveal">
+        <span class="header__logo-name">max</span>
+        <span class="header__logo-cursor"></span>
+      </span>
+    </a>
+  </div>
+</header>
