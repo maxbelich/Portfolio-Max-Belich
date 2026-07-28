@@ -1,1 +1,7 @@
-<p>card works!</p>
+@if (eyebrow()) {
+  <span class="card__eyebrow">{{ eyebrow() }}</span>
+}
+
+<div class="card__box">
+  <ng-content></ng-content>
+</div>
