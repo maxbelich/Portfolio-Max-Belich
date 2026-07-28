@@ -1,14 +1,54 @@
 @use 'index' as *;
 
-.button{
-    background: transparent;
-    border-radius: 999px;
-    border: 1px solid;
-    padding: 13px 24px;
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: rem(18);
-    border-color: $color-base;
-    color: $color-base;
-    text-decoration: none;
+.button {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 999px;
+  border: 1px solid;
+  padding: 13px 24px;
+  font-family: 'Karla';
+  font-weight: 400;
+  font-size: rem(18);
+  border-color: $color-base;
+  color: $color-base;
+  text-decoration: none;
+  transition: border-color 2s ease;
+
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  &__label {
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 2s ease;
+  }
+
+  &:hover &__label {
+  color: $color-accent;
+  animation: button-loop 2.4s linear infinite;
+}
+}
+
+@keyframes button-loop {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: linear;
+  }
+  42% {
+    transform: translateX(rem(-150));
+    animation-timing-function: steps(1, jump-end);
+  }
+  42.5% {
+    transform: translateX(rem(150));
+  }
+  67% {
+    transform: translateX(rem(150));
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
