@@ -1,0 +1,19 @@
+@use 'index' as *;
+
+
+.card {
+  &__eyebrow {
+    display: block;
+    color: $color-accent;
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: rem(24);
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    border: rem(1) solid $color-accent;
+    background: $color-accent10;
+    border-radius: rem(30);
+  }
+}
