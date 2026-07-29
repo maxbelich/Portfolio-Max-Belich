@@ -19,6 +19,7 @@
     color: $color-accent;
     font-size: rem(64);
     margin: 16px 0px 24px 32px;
+    letter-spacing: -0.03em;
   }
 
   &__intro {
@@ -32,10 +33,10 @@
   }
 
   &__cta-title {
-    font-family: 'Karla';
+    font-family: 'Fira Code';
     font-weight: 700;
     color: $color-base;
-    font-size: rem(18);
+    font-size: rem(24);
     margin: 0px 32px 8px 32px;
   }
 
@@ -47,7 +48,7 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base80;
-    font-size: rem(18);
+    font-size: rem(16);
     line-height: 120%;
     margin: 0px 32px 32px 32px;
   }
@@ -89,6 +90,10 @@
     text-align: center;
     white-space: pre-line;
     transition: color 0.3s ease;
+  }
+
+  &__item:not(&__item--special):hover &__icon {
+    transform: scale(1.1);
   }
 
   &__item--special:hover &__icon {
@@ -133,9 +138,9 @@
 
   &__tooltip-text {
     font-family: 'Karla';
-    font-weight: 600;
+    font-weight: 400;
     color: $color-accent;
-    font-size: rem(14);
+    font-size: rem(16);
     margin: 0 0 rem(12) 0;
   }
 
@@ -143,6 +148,7 @@
     display: flex;
     justify-content: center;
     gap: rem(16);
+    margin-bottom: rem(12);
   }
 
   &__tooltip-skill {
