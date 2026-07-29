@@ -1,3 +1,9 @@
+@use 'index' as *;
+
+html {
+  background-color: $color-gradient-black;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;

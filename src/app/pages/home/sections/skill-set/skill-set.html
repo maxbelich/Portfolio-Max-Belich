@@ -1,1 +1,33 @@
-<p>skill-set works!</p>
+<section class="skill-set" id="skill-set">
+  <div class="skill-set__inner">
+    <app-card eyebrow="Technologies">
+      <h2 class="skill-set__title">Skill Set</h2>
+
+      <p class="skill-set__intro">
+        A short introduction of your skills. Highlight your experience of using different
+        front-end technologies and emphasise your openness to learning and adapting to new
+        technologies. Show how important it is for you to keep up with the rapid changes in web
+        development.
+      </p>
+
+      <p class="skill-set__cta-title">
+        You need <span class="skill-set__accent">another skill?</span>
+      </p>
+
+      <p class="skill-set__cta-text">
+        Feel free to contact me. I look forward to expanding on my previous knowledge.
+      </p>
+
+      <app-button label="Let's Talk" target="contact"></app-button>
+    </app-card>
+
+    <ul class="skill-set__grid">
+      @for (skill of skills; track skill.name) {
+        <li class="skill-set__item">
+          <img [src]="skill.icon" alt="" class="skill-set__icon" />
+          <span class="skill-set__label">{{ skill.name }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
