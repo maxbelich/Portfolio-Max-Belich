@@ -61,7 +61,6 @@
   &__grid {
     list-style: none;
     margin: 0;
-    margin-top: rem(48);
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -94,6 +93,16 @@
 
   &__item--special:hover &__icon {
     transform: scale(1.15);
+  }
+
+  &__icon-arrows {
+    transform-origin: 30px 30px;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
+  }
+
+  &__item--special:hover &__icon-arrows {
+    transform: rotate(-180deg);
   }
 
   &__item--special:hover &__label {
