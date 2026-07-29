@@ -1,0 +1,12 @@
+<svg width="432" height="462" viewBox="0 0 432 462" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="layers">
+<rect width="432" height="462" fill="white"></rect>
+<path d="M186 124L332 185L244 226L99 165L186 124Z" fill="black"></path>
+<path d="M186 180L332 241L244 282L99 221L186 180Z" fill="black"></path>
+<path d="M186 236L332 297L244 338L99 277L186 236Z" fill="black"></path>
+</mask>
+<path d="M215.5 0L431 80L400 360L215.5 461L31 360L0 80L215.5 0Z" fill="white" mask="url(#layers)"></path>
+<path d="M186 124L332 185L244 226L99 165L186 124Z" fill="white" fill-opacity="0.5"></path>
+<path d="M186 180L332 241L244 282L99 221L186 180Z" fill="white" fill-opacity="0.25"></path>
+<path d="M186 236L332 297L244 338L99 277L186 236Z" fill="white" fill-opacity="0"></path>
+</svg>
