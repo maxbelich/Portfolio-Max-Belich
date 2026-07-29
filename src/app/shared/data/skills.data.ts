@@ -6,8 +6,8 @@ export const SKILLS: Skill[] = [
   { name: 'JavaScript', icon: '/icons/tech/frontend/tech-javascript.svg' },
   { name: 'TypeScript', icon: '/icons/tech/frontend/tech-typescript.svg' },
   { name: 'Angular', icon: '/icons/tech/frontend/tech-angular.svg' },
-  { name: 'Angular Material', icon: '/icons/tech/frontend/tech-angular-material.svg' },
+  { name: 'Angular\nMaterial', icon: '/icons/tech/frontend/tech-angular-material.svg' },
   { name: 'Git', icon: '/icons/tech/frontend/tech-git.svg' },
   { name: 'REST-API', icon: '/icons/tech/frontend/tech-rest-api.svg' },
-  { name: 'Growth mindset', icon: '/icons/tech/frontend/tech-growth-mindset.svg' },
+  { name: 'Growth\nmindset', icon: '/icons/tech/frontend/tech-growth-mindset.svg' },
 ];
