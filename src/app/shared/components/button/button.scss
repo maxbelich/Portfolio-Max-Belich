@@ -23,7 +23,7 @@
   &__label {
     display: inline-block;
     white-space: nowrap;
-    transition: color 2s ease;
+    transition: color 2s ease, transform 0.6s ease;
   }
 
   &:hover &__label {

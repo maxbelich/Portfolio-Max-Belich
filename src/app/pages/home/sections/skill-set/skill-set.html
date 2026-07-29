@@ -22,10 +22,26 @@
     </app-card>
 
     <ul class="skill-set__grid">
-      @for (skill of skills; track skill.name) {
-        <li class="skill-set__item">
+      @for (skill of skills; track skill.name; let last = $last) {
+        <li class="skill-set__item" [class.skill-set__item--special]="last">
           <img [src]="skill.icon" alt="" class="skill-set__icon" />
           <span class="skill-set__label">{{ skill.name }}</span>
+
+          @if (last) {
+            <div class="skill-set__tooltip">
+              <p class="skill-set__tooltip-text">I have a special interest in learning</p>
+              <div class="skill-set__tooltip-skills">
+                <div class="skill-set__tooltip-skill">
+                  <img src="/icons/tech/frontend/tech-react.svg" alt="" />
+                  <span>React</span>
+                </div>
+                <div class="skill-set__tooltip-skill">
+                  <img src="/icons/tech/frontend/tech-vuejs.svg" alt="" />
+                  <span>Vue Js</span>
+                </div>
+              </div>
+            </div>
+          }
         </li>
       }
     </ul>
