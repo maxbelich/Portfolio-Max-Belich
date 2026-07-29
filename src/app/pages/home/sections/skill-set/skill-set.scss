@@ -61,10 +61,11 @@
   &__grid {
     list-style: none;
     margin: 0;
+    margin-top: rem(48);
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: rem(48);
+    gap: rem(72);
   }
 
   &__item {
@@ -85,6 +86,7 @@
     color: $color-base;
     font-size: rem(16);
     text-align: center;
+    white-space: pre-line;
   }
 }
 
