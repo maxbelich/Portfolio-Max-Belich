@@ -65,10 +65,11 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: rem(72);
+    gap: rem(48) rem(72);
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,6 +79,7 @@
   &__icon {
     width: rem(64);
     height: rem(64);
+    transition: transform 0.3s ease;
   }
 
   &__label {
@@ -87,6 +89,70 @@
     font-size: rem(16);
     text-align: center;
     white-space: pre-line;
+    transition: color 0.3s ease;
+  }
+
+  &__item--special:hover &__icon {
+    transform: scale(1.15);
+  }
+
+  &__item--special:hover &__label {
+    color: $color-accent;
+  }
+
+  &__tooltip {
+    position: absolute;
+    bottom: calc(100% - #{rem(28)});
+    left: 65%;
+    transform: translateX(-33.5%);
+    width: rem(196);
+    aspect-ratio: 196 / 135;
+    background: url('/icons/ui/speech-bubble.svg') no-repeat center / 100% 100%;
+    padding: rem(14) rem(20) rem(28) rem(20);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 5;
+  }
+
+  &__item--special:hover &__tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__tooltip-text {
+    font-family: 'Karla';
+    font-weight: 600;
+    color: $color-accent;
+    font-size: rem(14);
+    margin: 0 0 rem(12) 0;
+  }
+
+  &__tooltip-skills {
+    display: flex;
+    justify-content: center;
+    gap: rem(16);
+  }
+
+  &__tooltip-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(4);
+
+    img {
+      width: rem(28);
+      height: rem(28);
+    }
+
+    span {
+      font-family: 'Karla';
+      font-weight: 500;
+      color: $color-accent;
+      font-size: rem(13);
+    }
   }
 }
 
