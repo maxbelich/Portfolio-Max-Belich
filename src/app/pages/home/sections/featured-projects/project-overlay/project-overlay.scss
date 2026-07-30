@@ -35,10 +35,22 @@
     align-items: center;
     justify-content: center;
 
-    img {
-      width: rem(18);
-      height: rem(18);
+    &:hover &-icon {
+      background-color: $color-accent;
+      transform: scale(1.15);
     }
+  }
+
+  &__close-icon {
+    display: inline-block;
+    width: rem(18);
+    height: rem(18);
+    background-color: $color-base;
+    mask-image: url('/icons/ui/close.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
   &__grid {
