@@ -15,7 +15,7 @@
     font-family: 'Karla';
     font-weight: 700;
     color: $color-accent;
-    font-size: rem(18);
+    font-size: rem(24);
     margin-bottom: rem(8);
   }
 
@@ -25,6 +25,7 @@
     color: $color-accent;
     font-size: rem(64);
     margin-bottom: rem(16);
+    letter-spacing: -0.03em;
   }
 
   &__intro {
@@ -34,6 +35,7 @@
     font-size: rem(18);
     line-height: 120%;
     margin-bottom: rem(48);
+    max-width: 35%;
   }
 
   &__content {
@@ -73,10 +75,10 @@
     display: inline-flex;
     align-items: center;
     gap: rem(8);
-    font-family: 'Karla';
+    font-family: 'Fira Code';
     font-weight: 700;
     color: $color-base;
-    font-size: rem(20);
+    font-size: rem(24);
   }
 
   &__item-arrow {
@@ -100,7 +102,7 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base;
-    font-size: rem(16);
+    font-size: rem(18);
   }
 
   &__item-tech-separator {
