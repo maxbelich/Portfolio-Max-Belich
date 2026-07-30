@@ -10,7 +10,7 @@
         <img src="/icons/ui/close.svg" alt="" />
       </button>
 
-      <div class="project-overlay__grid">
+      <div class="project-overlay__grid" [class.project-overlay__grid--transitioning]="isTransitioning()">
         <div class="project-overlay__info">
           <span class="project-overlay__index">{{ (index() + 1).toString().padStart(2, '0') }}</span>
           <h2 class="project-overlay__title">{{ project.title }}</h2>
@@ -65,7 +65,7 @@
         }
       </div>
 
-      <button type="button" class="project-overlay__next" (click)="next.emit()">
+      <button type="button" class="project-overlay__next" (click)="onNextClick()">
         Next project
         <img src="/icons/ui/arrow-forward-green.svg" alt="" />
       </button>
