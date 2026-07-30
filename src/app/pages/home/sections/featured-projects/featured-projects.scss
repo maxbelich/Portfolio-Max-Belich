@@ -1,0 +1,134 @@
+@use 'index' as *;
+
+.featured-projects {
+  background: $color-gradient-black;
+  position: relative;
+
+  &__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: rem(96);
+  }
+
+  &__eyebrow {
+    display: block;
+    font-family: 'Karla';
+    font-weight: 700;
+    color: $color-accent;
+    font-size: rem(18);
+    margin-bottom: rem(8);
+  }
+
+  &__title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    color: $color-accent;
+    font-size: rem(64);
+    margin-bottom: rem(16);
+  }
+
+  &__intro {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base;
+    font-size: rem(18);
+    line-height: 120%;
+    margin-bottom: rem(48);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__list {
+    flex: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(24) rem(32);
+    margin-inline: rem(-32);
+    border-top: rem(1) solid $color-accent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:last-child {
+      border-bottom: rem(1) solid $color-accent;
+    }
+
+    &:hover {
+      background-color: $color-accent10;
+    }
+  }
+
+  &__item-title {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8);
+    font-family: 'Karla';
+    font-weight: 700;
+    color: $color-base;
+    font-size: rem(20);
+  }
+
+  &__item-arrow {
+    display: inline-block;
+    width: rem(14);
+    height: rem(14);
+    background-color: $color-base;
+    mask-image: url('/icons/ui/arrow-external.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__item:hover &__item-arrow {
+    opacity: 1;
+  }
+
+  &__item-tech {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base;
+    font-size: rem(16);
+  }
+
+  &__preview-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: rem(320);
+    margin-left: rem(96);
+  }
+
+  &__preview-stripes {
+    position: absolute;
+    bottom: rem(-24);
+    right: rem(-24);
+    width: rem(140);
+    z-index: 0;
+  }
+
+  &__preview {
+    position: relative;
+    width: 100%;
+    border-radius: rem(16);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
