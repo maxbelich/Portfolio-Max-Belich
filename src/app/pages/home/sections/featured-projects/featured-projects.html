@@ -1,1 +1,51 @@
-<p>featured-projects works!</p>
+<section class="featured-projects" id="featured-projects">
+  <div class="featured-projects__inner">
+    <span class="featured-projects__eyebrow">Portfolio</span>
+    <h2 class="featured-projects__title">Featured Projects</h2>
+    <p class="featured-projects__intro">
+      Explore a selection of my work here - Interact with projects to see my skills in action.
+    </p>
+
+    <div class="featured-projects__content">
+      <ul class="featured-projects__list">
+        @for (project of projects; track project.id) {
+          <li
+            class="featured-projects__item"
+            (mouseenter)="hoveredProjectId.set(project.id)"
+            (mouseleave)="hoveredProjectId.set(null)"
+            (click)="selectedProjectId.set(project.id)"
+          >
+            <span class="featured-projects__item-title">
+              {{ project.title }}
+              @if (project.githubLink || project.liveLink) {
+                <span class="featured-projects__item-arrow" aria-hidden="true"></span>
+              }
+            </span>
+            <span class="featured-projects__item-tech">{{ techLabel(project) }}</span>
+          </li>
+        }
+      </ul>
+
+      <div class="featured-projects__preview-wrap">
+        <img
+          src="/images/img-bg-stripes.svg"
+          alt=""
+          class="featured-projects__preview-stripes"
+        />
+        <img
+          [attr.src]="hoveredImage()"
+          alt=""
+          class="featured-projects__preview"
+          [class.featured-projects__preview--visible]="!!hoveredImage()"
+        />
+      </div>
+    </div>
+  </div>
+
+  <app-project-overlay
+    [project]="selectedProject()"
+    [index]="selectedIndex()"
+    (closed)="selectedProjectId.set(null)"
+    (next)="nextProject()"
+  />
+</section>

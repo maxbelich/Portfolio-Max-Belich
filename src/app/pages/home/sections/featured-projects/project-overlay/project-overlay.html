@@ -1,0 +1,74 @@
+@if (project(); as project) {
+  <div class="project-overlay" (click)="closed.emit()">
+    <div class="project-overlay__content" (click)="$event.stopPropagation()">
+      <button
+        type="button"
+        class="project-overlay__close"
+        (click)="closed.emit()"
+        aria-label="Close"
+      >
+        <img src="/icons/ui/close.svg" alt="" />
+      </button>
+
+      <div class="project-overlay__grid">
+        <div class="project-overlay__info">
+          <span class="project-overlay__index">{{ (index() + 1).toString().padStart(2, '0') }}</span>
+          <h2 class="project-overlay__title">{{ project.title }}</h2>
+
+          <h3 class="project-overlay__subtitle">What is this project about?</h3>
+          @if (project.description) {
+            <p class="project-overlay__description">{{ project.description }}</p>
+          }
+
+          <ul class="project-overlay__tech">
+            @for (tech of project.techStack; track tech.name) {
+              <li class="project-overlay__tech-item">
+                <span
+                  class="project-overlay__tech-icon"
+                  [style.mask-image]="'url(' + tech.icon + ')'"
+                  [style.-webkit-mask-image]="'url(' + tech.icon + ')'"
+                  aria-hidden="true"
+                ></span>
+                <span>{{ tech.name }}</span>
+              </li>
+            }
+          </ul>
+
+          <div class="project-overlay__actions">
+            @if (project.githubLink) {
+              <a
+                [href]="project.githubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-overlay__button"
+              >
+                GitHub
+                <span class="project-overlay__button-arrow" aria-hidden="true"></span>
+              </a>
+            }
+            @if (project.liveLink) {
+              <a
+                [href]="project.liveLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-overlay__button"
+              >
+                Live Test
+                <span class="project-overlay__button-arrow" aria-hidden="true"></span>
+              </a>
+            }
+          </div>
+        </div>
+
+        @if (project.image) {
+          <img [src]="project.image" [alt]="project.title" class="project-overlay__image" />
+        }
+      </div>
+
+      <button type="button" class="project-overlay__next" (click)="next.emit()">
+        Next project
+        <img src="/icons/ui/arrow-forward-green.svg" alt="" />
+      </button>
+    </div>
+  </div>
+}
