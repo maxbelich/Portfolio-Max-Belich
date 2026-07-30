@@ -52,7 +52,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: rem(24) rem(32);
+    width: rem(880);
+    height: rem(110);
+    padding-inline: rem(32);
     margin-inline: rem(-32);
     border-top: rem(1) solid $color-accent;
     cursor: pointer;
@@ -63,7 +65,7 @@
     }
 
     &:hover {
-      background-color: $color-accent10;
+      background-color: $color-accent30;
     }
   }
 
@@ -101,24 +103,42 @@
     font-size: rem(16);
   }
 
+  &__item-tech-separator {
+    color: $color-accent;
+  }
+
   &__preview-wrap {
     position: relative;
     flex-shrink: 0;
-    width: rem(320);
+    width: rem(295);
     margin-left: rem(96);
+    transition: top 0.3s ease;
   }
 
   &__preview-stripes {
     position: absolute;
-    bottom: rem(-24);
-    right: rem(-24);
-    width: rem(140);
+    width: rem(295);
+    height: rem(192);
+    bottom: rem(-20);
+    right: rem(-20);
     z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__preview {
     position: relative;
-    width: 100%;
+    width: rem(295);
+    height: rem(192);
+    object-fit: cover;
+    object-position: left center;
     border-radius: rem(16);
     z-index: 1;
     opacity: 0;

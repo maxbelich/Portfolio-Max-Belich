@@ -11,7 +11,7 @@
         @for (project of projects; track project.id) {
           <li
             class="featured-projects__item"
-            (mouseenter)="hoveredProjectId.set(project.id)"
+            (mouseenter)="onHover(project.id)"
             (mouseleave)="hoveredProjectId.set(null)"
             (click)="selectedProjectId.set(project.id)"
           >
@@ -21,22 +21,30 @@
                 <span class="featured-projects__item-arrow" aria-hidden="true"></span>
               }
             </span>
-            <span class="featured-projects__item-tech">{{ techLabel(project) }}</span>
+            <span class="featured-projects__item-tech">
+              @for (tech of project.techStack; track tech.name; let last = $last) {
+                {{ tech.name }}
+                @if (!last) {
+                  <span class="featured-projects__item-tech-separator"> | </span>
+                }
+              }
+            </span>
           </li>
         }
       </ul>
 
-      <div class="featured-projects__preview-wrap">
+      <div class="featured-projects__preview-wrap" [style.top.px]="previewTop()">
         <img
-          src="/images/img-bg-stripes.svg"
+          src="/images/img-bg-stripes-hover.svg"
           alt=""
           class="featured-projects__preview-stripes"
+          [class.featured-projects__preview-stripes--visible]="isPreviewVisible()"
         />
         <img
-          [attr.src]="hoveredImage()"
+          [attr.src]="previewImage()"
           alt=""
           class="featured-projects__preview"
-          [class.featured-projects__preview--visible]="!!hoveredImage()"
+          [class.featured-projects__preview--visible]="isPreviewVisible()"
         />
       </div>
     </div>

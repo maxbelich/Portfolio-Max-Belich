@@ -7,7 +7,7 @@
         (click)="closed.emit()"
         aria-label="Close"
       >
-        <img src="/icons/ui/close.svg" alt="" />
+        <span class="project-overlay__close-icon" aria-hidden="true"></span>
       </button>
 
       <div class="project-overlay__grid" [class.project-overlay__grid--transitioning]="isTransitioning()">
