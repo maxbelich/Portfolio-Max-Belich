@@ -1,11 +1,12 @@
 @use 'index' as *;
 
 .testimonials {
-  display: flex;
-  justify-content: center;
-  gap: rem(32);
-  padding: rem(80) rem(24);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(48);
+  padding: rem(80) rem(24);
 
   &__quote {
     position: absolute;
@@ -18,5 +19,90 @@
     line-height: 1;
     color: $color-base;
     pointer-events: none;
+  }
+
+  &__track {
+    display: flex;
+    justify-content: center;
+    gap: rem(32);
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover &-icon {
+      background-color: $color-accent;
+    }
+
+    &--prev:hover {
+      transform: translateX(rem(-4));
+    }
+
+    &--next:hover {
+      transform: translateX(rem(4));
+    }
+  }
+
+  &__arrow-icon {
+    display: inline-block;
+    width: rem(22);
+    height: rem(22);
+    background-color: $color-base;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    transition: background-color 0.3s ease;
+
+    &--prev {
+      mask-image: url('/icons/ui/arrow-left.svg');
+      -webkit-mask-image: url('/icons/ui/arrow-left.svg');
+    }
+
+    &--next {
+      mask-image: url('/icons/ui/arrow-right.svg');
+      -webkit-mask-image: url('/icons/ui/arrow-right.svg');
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+  }
+
+  &__dot {
+    width: rem(10);
+    height: rem(10);
+    padding: 0;
+    background: $color-base;
+    border: none;
+    border-radius: rem(999);
+    cursor: pointer;
+    transition: width 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover:not(&--active) {
+      transform: scale(1.2);
+    }
+
+    &--active {
+      width: rem(24);
+      background: $color-accent;
+    }
   }
 }

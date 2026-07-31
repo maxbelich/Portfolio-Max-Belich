@@ -1,7 +1,46 @@
 <section class="testimonials">
   <span class="testimonials__quote" aria-hidden="true">&ldquo;</span>
 
-  @for (testimonial of testimonials; track testimonial.name) {
-    <app-testimonial-card [testimonial]="testimonial" />
-  }
+  <div class="testimonials__track">
+    @for (item of visibleTestimonials(); track item.testimonial.name) {
+      <app-testimonial-card
+        [testimonial]="item.testimonial"
+        [class.testimonials__card--prev]="item.position === 'prev'"
+        [class.testimonials__card--current]="item.position === 'current'"
+        [class.testimonials__card--next]="item.position === 'next'"
+      />
+    }
+  </div>
+
+  <div class="testimonials__controls">
+    <button
+      type="button"
+      class="testimonials__arrow testimonials__arrow--prev"
+      (click)="prev()"
+      aria-label="Previous testimonial"
+    >
+      <span class="testimonials__arrow-icon testimonials__arrow-icon--prev" aria-hidden="true"></span>
+    </button>
+
+    <div class="testimonials__dots">
+      @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+        <button
+          type="button"
+          class="testimonials__dot"
+          [class.testimonials__dot--active]="i === currentIndex()"
+          (click)="goTo(i)"
+          [attr.aria-label]="'Go to testimonial ' + (i + 1)"
+        ></button>
+      }
+    </div>
+
+    <button
+      type="button"
+      class="testimonials__arrow testimonials__arrow--next"
+      (click)="next()"
+      aria-label="Next testimonial"
+    >
+      <span class="testimonials__arrow-icon testimonials__arrow-icon--next" aria-hidden="true"></span>
+    </button>
+  </div>
 </section>
