@@ -1,5 +1,8 @@
 @use 'index' as *;
 
+$testimonial-card-height: rem(240);
+$testimonial-step: rem(544);
+
 .testimonials {
   position: relative;
   display: flex;
@@ -8,23 +11,81 @@
   gap: rem(48);
   padding: rem(80) rem(24);
 
+  &__title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: rem(32);
+    color: $color-accent;
+    text-align: center;
+  }
+
+  &__stage {
+    position: relative;
+    width: 100%;
+    max-width: rem(1440);
+    height: $testimonial-card-height;
+    overflow: hidden;
+  }
+
   &__quote {
     position: absolute;
-    top: rem(31);
-    left: 49%;
-    transform: translateX(calc(-50% - rem(218)));
+    top: rem(121);
+    left: 53%;
+    transform: translateX(calc(-50% - rem(262)));
     font-family: 'Karla';
     font-weight: 700;
     font-size: rem(140);
     line-height: 1;
     color: $color-base;
     pointer-events: none;
+    z-index: 5;
   }
 
-  &__track {
-    display: flex;
-    justify-content: center;
-    gap: rem(32);
+  &__fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: rem(220);
+    z-index: 4;
+    pointer-events: none;
+
+    &--left {
+      left: 0;
+      background: linear-gradient(to right, $color-gradient-black 0%, transparent 100%);
+    }
+
+    &--right {
+      right: 0;
+      background: linear-gradient(to left, $color-gradient-black 0%, transparent 100%);
+    }
+  }
+
+  &__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    &--current {
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 3;
+    }
+
+    &--prev {
+      transform: translate(calc(-50% - #{$testimonial-step}), -50%) scale(0.85);
+      z-index: 2;
+    }
+
+    &--next {
+      transform: translate(calc(-50% + #{$testimonial-step}), -50%) scale(0.85);
+      z-index: 2;
+    }
+
+    &--hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0.7);
+    }
   }
 
   &__controls {
@@ -83,26 +144,36 @@
   &__dots {
     display: flex;
     align-items: center;
-    gap: rem(12);
+    gap: rem(8);
   }
 
   &__dot {
-    width: rem(10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24);
     height: rem(10);
     padding: 0;
-    background: $color-base;
+    background: transparent;
     border: none;
-    border-radius: rem(999);
     cursor: pointer;
-    transition: width 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
 
-    &:hover:not(&--active) {
-      transform: scale(1.2);
+    &:hover:not(&--active) &-shape {
+      width: rem(12);
     }
 
-    &--active {
+    &--active &-shape {
       width: rem(24);
       background: $color-accent;
     }
+  }
+
+  &__dot-shape {
+    display: block;
+    width: rem(10);
+    height: rem(10);
+    border-radius: rem(999);
+    background: $color-base;
+    transition: width 0.3s ease, background-color 0.3s ease;
   }
 }

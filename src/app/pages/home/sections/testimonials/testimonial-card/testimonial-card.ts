@@ -9,4 +9,5 @@ import { Testimonial } from '../../../../../shared/interfaces/testimonial';
 })
 export class TestimonialCard {
   testimonial = input.required<Testimonial>();
+  dimmed = input<boolean>(false);
 }
