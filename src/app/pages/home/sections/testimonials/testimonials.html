@@ -1,1 +1,7 @@
-<p>testimonials works!</p>
+<section class="testimonials">
+  <span class="testimonials__quote" aria-hidden="true">&ldquo;</span>
+
+  @for (testimonial of testimonials; track testimonial.name) {
+    <app-testimonial-card [testimonial]="testimonial" />
+  }
+</section>
