@@ -2,6 +2,8 @@ import { Component, computed, signal } from '@angular/core';
 import { TestimonialCard } from './testimonial-card/testimonial-card';
 import { TESTIMONIALS } from '../../../../shared/data/testimonials.data';
 
+type CarouselPosition = 'current' | 'prev' | 'next' | 'hidden';
+
 @Component({
   selector: 'app-testimonials',
   imports: [TestimonialCard],
@@ -13,17 +15,23 @@ export class Testimonials {
 
   currentIndex = signal(0);
 
-  visibleTestimonials = computed(() => {
+  displayItems = computed(() => {
     const length = this.testimonials.length;
     const current = this.currentIndex();
     const prevIndex = (current - 1 + length) % length;
     const nextIndex = (current + 1) % length;
 
-    return [
-      { testimonial: this.testimonials[prevIndex], position: 'prev' as const },
-      { testimonial: this.testimonials[current], position: 'current' as const },
-      { testimonial: this.testimonials[nextIndex], position: 'next' as const },
-    ];
+    return this.testimonials.map((testimonial, index) => {
+      let position: CarouselPosition = 'hidden';
+      if (index === current) {
+        position = 'current';
+      } else if (index === prevIndex) {
+        position = 'prev';
+      } else if (index === nextIndex) {
+        position = 'next';
+      }
+      return { testimonial, position };
+    });
   });
 
   prev() {

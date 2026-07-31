@@ -5,12 +5,18 @@
   flex-direction: column;
   justify-content: space-between;
   gap: rem(24);
-  width: rem(390);
-  height: rem(190);
-  padding: rem(32);
+  width: rem(480);
+  height: rem(240);
+  padding: rem(40);
   background: $color-accent30;
   border-radius: rem(16);
-  border: 1px solid $color-accent;
+  border: rem(1) solid $color-accent;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+
+  &--dimmed {
+    background: rgba($color-accent, 0.08);
+    border-color: rgba($color-accent, 0.15);
+  }
 
   &__text {
     font-family: 'Karla';

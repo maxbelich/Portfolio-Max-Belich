@@ -1,13 +1,21 @@
 <section class="testimonials">
   <span class="testimonials__quote" aria-hidden="true">&ldquo;</span>
 
-  <div class="testimonials__track">
-    @for (item of visibleTestimonials(); track item.testimonial.name) {
+  <h2 class="testimonials__title">What my colleagues say about me</h2>
+
+  <div class="testimonials__stage">
+    <div class="testimonials__fade testimonials__fade--left" aria-hidden="true"></div>
+    <div class="testimonials__fade testimonials__fade--right" aria-hidden="true"></div>
+
+    @for (item of displayItems(); track item.testimonial.name) {
       <app-testimonial-card
         [testimonial]="item.testimonial"
-        [class.testimonials__card--prev]="item.position === 'prev'"
+        [dimmed]="item.position !== 'current'"
+        class="testimonials__card"
         [class.testimonials__card--current]="item.position === 'current'"
+        [class.testimonials__card--prev]="item.position === 'prev'"
         [class.testimonials__card--next]="item.position === 'next'"
+        [class.testimonials__card--hidden]="item.position === 'hidden'"
       />
     }
   </div>
@@ -30,7 +38,9 @@
           [class.testimonials__dot--active]="i === currentIndex()"
           (click)="goTo(i)"
           [attr.aria-label]="'Go to testimonial ' + (i + 1)"
-        ></button>
+        >
+          <span class="testimonials__dot-shape" aria-hidden="true"></span>
+        </button>
       }
     </div>
 
