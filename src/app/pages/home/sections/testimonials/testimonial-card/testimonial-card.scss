@@ -1,0 +1,42 @@
+@use 'index' as *;
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(24);
+  width: rem(390);
+  height: rem(190);
+  padding: rem(32);
+  background: $color-accent30;
+  border-radius: rem(16);
+  border: 1px solid $color-accent;
+
+  &__text {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base;
+    font-size: rem(18);
+    line-height: 120%;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__line {
+    width: rem(120);
+    height: rem(1);
+    background: $color-base80;
+  }
+
+  &__name {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base;
+    font-size: rem(16);
+    white-space: nowrap;
+  }
+}

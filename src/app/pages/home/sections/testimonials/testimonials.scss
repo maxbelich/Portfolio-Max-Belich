@@ -1,0 +1,22 @@
+@use 'index' as *;
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: rem(32);
+  padding: rem(80) rem(24);
+  position: relative;
+
+  &__quote {
+    position: absolute;
+    top: rem(31);
+    left: 49%;
+    transform: translateX(calc(-50% - rem(218)));
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: rem(140);
+    line-height: 1;
+    color: $color-base;
+    pointer-events: none;
+  }
+}
