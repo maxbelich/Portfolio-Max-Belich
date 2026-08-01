@@ -1,0 +1,217 @@
+@use 'index' as *;
+
+.contact {
+  background: $color-gradient-black;
+
+  &__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: rem(96);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: rem(96);
+  }
+
+  &__info {
+    flex: 1;
+    max-width: rem(480);
+  }
+
+  &__eyebrow {
+    display: block;
+    color: $color-accent;
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: rem(24);
+    margin-bottom: rem(20);
+  }
+
+  &__title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    color: $color-accent;
+    font-size: rem(64);
+    margin-bottom: rem(24);
+  }
+
+  &__subtitle {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    color: $color-base;
+    font-size: rem(24);
+    margin-bottom: rem(8);
+  }
+
+  &__text {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base80;
+    font-size: rem(18);
+    line-height: 120%;
+    text-align: justify;
+    margin-bottom: rem(24);
+  }
+
+  &__cta {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base;
+    font-size: rem(18);
+  }
+
+  &__accent {
+    color: $color-accent;
+    font-weight: 700;
+  }
+
+  &__form {
+    flex: 1;
+    max-width: rem(520);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    border-top: rem(1) solid $color-accent70;
+    padding-block: rem(16);
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    transition: border-color 0.3s ease;
+
+    &--last {
+      border-bottom: rem(1) solid $color-accent70;
+    }
+
+    &:hover,
+    &:focus-within,
+    &--active {
+      border-color: $color-accent;
+
+      .contact__label {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__label {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    color: $color-accent70;
+    font-size: rem(20);
+    transition: color 0.3s ease;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base80;
+    font-size: rem(16);
+
+    &::placeholder {
+      color: $color-base80;
+    }
+
+    &--textarea {
+      resize: none;
+      field-sizing: content;
+      min-height: rem(24);
+      max-height: rem(160);
+
+      &::-webkit-scrollbar {
+        width: rem(3);
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-accent70;
+        border-radius: 999px;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+
+    &--error::placeholder {
+      color: $color-error80;
+    }
+
+    &--error:focus::placeholder {
+      color: $color-error60;
+    }
+  }
+
+  &__error {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-error80;
+    font-size: rem(14);
+  }
+
+  &__privacy {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(12);
+    margin-top: rem(24);
+  }
+
+  &__checkbox {
+    flex-shrink: 0;
+    width: rem(20);
+    height: rem(20);
+    margin-top: rem(2);
+    accent-color: $color-accent;
+    cursor: pointer;
+  }
+
+  &__privacy-label {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-base80;
+    font-size: rem(14);
+    line-height: 120%;
+  }
+
+  &__link {
+    color: $color-accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__submit {
+    align-self: center;
+    margin-top: rem(48);
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 999px;
+    border: rem(1) solid $color-base;
+    padding: 13px 32px;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: rem(18);
+    color: $color-base;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+
+    &:not(:disabled):hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}
