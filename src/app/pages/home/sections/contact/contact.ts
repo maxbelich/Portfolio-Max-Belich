@@ -32,10 +32,6 @@ export class Contact {
 
   async onSubmit(event: Event): Promise<void> {
     event.preventDefault();
-    // submit() markiert alle Felder als touched, damit Fehler auch ohne vorheriges
-    // Antippen sichtbar werden, und führt die Action nur bei gültigem Formular aus.
-    await submit(this.contactForm, async () => {
-      // TODO: tatsächliches Versenden
-    });
+    await submit(this.contactForm, async () => {});
   }
 }
