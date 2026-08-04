@@ -1,1 +1,56 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="/" class="footer__logo" aria-label="Max Belich – Home">
+        <svg class="footer__logo-mark" width="40" height="40" viewBox="0 0 100 100">
+          <rect width="100" height="100" rx="24" fill="#3DCFB6" />
+          <path
+            d="M12 58 C 20 36 30 36 38 50 C 46 64 56 64 64 44"
+            fill="none"
+            stroke="#0B0F0E"
+            stroke-width="9"
+            stroke-linecap="round"
+          />
+          <line
+            x1="66"
+            y1="82"
+            x2="90"
+            y2="20"
+            stroke="#0B0F0E"
+            stroke-width="9"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class="footer__logo-name">max_belich</span>
+      </a>
+
+      <p class="footer__role">Frontend Developer</p>
+      <p class="footer__location">Stuttgart, Germany</p>
+    </div>
+
+    <p class="footer__copyright">© Max Belich {{ currentYear }}</p>
+
+    <nav class="footer__links">
+      <a
+        href="https://github.com/maxbelich"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__link"
+        >Github<span class="footer__dot"></span
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/max-belich-6b844b424/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__link"
+        >LinkedIn<span class="footer__dot"></span
+      ></a>
+      <a href="mailto:maxbelich@web.de" class="footer__link"
+        >Email<span class="footer__dot"></span
+      ></a>
+      <a routerLink="/impressum" class="footer__link"
+        >Legal Notice<span class="footer__dot"></span
+      ></a>
+    </nav>
+  </div>
+</footer>
