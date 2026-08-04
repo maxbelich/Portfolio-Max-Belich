@@ -6,6 +6,13 @@
   @return math.div($value, 16) * 1rem;
 }
 
+@function fluid($min-px, $max-px, $min-vw: 320, $max-vw: 1440) {
+  $slope: math.div($max-px - $min-px, $max-vw - $min-vw);
+  $intersection-px: $min-px - $slope * $min-vw;
+
+  @return clamp(#{rem($min-px)}, #{rem($intersection-px)} + #{$slope * 100}vw, #{rem($max-px)});
+}
+
 @mixin respond-to($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
     @media (min-width: map.get($breakpoints, $breakpoint)) {
