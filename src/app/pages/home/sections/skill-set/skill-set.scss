@@ -1,24 +1,24 @@
 @use 'index' as *;
 
 .skill-set {
-  background: $gradient-skill-set;
+  background: radial-gradient(rem(323) 43.85% at calc(50% - #{rem(702.4)}) 52.45%, rgba($color-gradient-green, 0.3) 0%, $color-gradient-black 100%);
 
   &__inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: rem(96);
+    padding: fluid(24, 96);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: rem(96);
+    gap: fluid(24, 96);
   }
 
   &__title {
     font-family: 'Fira Code';
     font-weight: 700;
     color: $color-accent;
-    font-size: rem(64);
-    margin: 16px 0px 24px 32px;
+    font-size: fluid(32, 64);
+    margin: fluid(8, 16) 0px fluid(12, 24) fluid(16, 32);
     letter-spacing: -0.03em;
   }
 
@@ -26,18 +26,18 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     line-height: 120%;
     text-align: justify;
-    margin: 0px 32px 32px 32px;
+    margin: 0px fluid(16, 32) fluid(16, 32) fluid(16, 32);
   }
 
   &__cta-title {
     font-family: 'Fira Code';
     font-weight: 700;
     color: $color-base;
-    font-size: rem(24);
-    margin: 0px 32px 8px 32px;
+    font-size: fluid(16, 24);
+    margin: 0px fluid(16, 32) fluid(6, 8) fluid(16, 32);
   }
 
   &__accent {
@@ -50,22 +50,22 @@
     color: $color-base80;
     font-size: rem(16);
     line-height: 120%;
-    margin: 0px 32px 32px 32px;
+    margin: 0px fluid(16, 32) fluid(16, 32) fluid(16, 32);
   }
 
   app-button {
     display: inline-block;
-    margin-left: rem(32);
-    margin-bottom: rem(32);
+    margin-left: fluid(16, 32);
+    margin-bottom: fluid(16, 32);
   }
 
   &__grid {
     list-style: none;
-    margin: 40px 0 0 0;
+    margin: fluid(24, 40) 0 0 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: rem(48) rem(72);
+    gap: fluid(24, 48) fluid(36, 72);
   }
 
   &__item {
@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: rem(8);
+    gap: fluid(6, 8);
   }
 
   &__icon {
@@ -86,7 +86,7 @@
     font-family: 'Fira Code';
     font-weight: 400;
     color: $color-base;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     text-align: center;
     white-space: pre-line;
     transition: color 0.3s ease;
@@ -175,5 +175,5 @@
 
 app-card {
   width: 100%;
-  max-width: rem(540);
+  max-width: fluid(280, 540);
 }
