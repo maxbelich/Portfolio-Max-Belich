@@ -7,13 +7,13 @@
     color: $color-accent;
     font-family: 'Karla';
     font-weight: 700;
-    font-size: rem(24);
-    margin-bottom: 20px;
+    font-size: fluid(16, 24);
+    margin-bottom: fluid(12, 20);
   }
 
   &__box {
     border: rem(1) solid $color-accent;
     background: $color-accent10;
-    border-radius: rem(30);
+    border-radius: fluid(16, 30);
   }
 }
