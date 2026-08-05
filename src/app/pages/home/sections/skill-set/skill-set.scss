@@ -61,7 +61,7 @@
 
   &__grid {
     list-style: none;
-    margin: 0;
+    margin: 40px 0 0 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -127,7 +127,9 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
     z-index: 5;
   }
 

@@ -26,12 +26,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: fluid(8, 12);
   }
 
   &__name {
     font-family: 'Karla';
-    font-size: rem(128);
+    font-size: fluid(48, 128);
     font-weight: 700;
     color: $color-hero;
     letter-spacing: -0.02em;
@@ -40,7 +40,7 @@
   &__eyebrow {
     font-family: 'Fira Code';
     font-weight: 400;
-    font-size: rem(40);
+    font-size: fluid(18, 40);
     color: $color-hero;
   }
 
@@ -50,26 +50,26 @@
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 48px;
+    gap: fluid(16, 48);
   }
 
   &__scroll {
     position: absolute;
-    width: 30px;
-    left: 96px;
-    top: calc(50% + 140px);
+    width: fluid(20, 30);
+    left: fluid(24, 96);
+    top: calc(50% + #{fluid(60, 140)});
     bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: fluid(6, 8);
   }
 
   &__scroll-circle {
     border: 1px solid $color-accent;
-    border-radius: 32px;
-    width: 30px;
-    height: 48px;
+    border-radius: fluid(24, 32);
+    width: fluid(20, 30);
+    height: fluid(32, 48);
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -78,8 +78,8 @@
 
   &__scroll-arrow {
     transform: translateX(0.6px) rotate(-90deg);
-    height: 20px;
-    width: 14px;
+    height: fluid(14, 20);
+    width: fluid(10, 14);
 
     @media (prefers-reduced-motion: no-preference) {
       animation: hero-scroll-bounce 1.6s infinite;
@@ -97,11 +97,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    right: 96px;
-    top: calc(50% - 49.95px);
+    right: fluid(24, 96);
+    top: calc(50% - #{fluid(20, 49.95)});
     bottom: 0px;
-    gap: 27px;
-    width: 26px;
+    gap: fluid(16, 27);
+    width: fluid(20, 26);
   }
 
   &__social-line {
@@ -124,8 +124,8 @@
 
   &__social-icon {
     display: block;
-    width: 26px;
-    height: 26px;
+    width: fluid(20, 26);
+    height: fluid(20, 26);
     background-color: $color-accent;
     mask-repeat: no-repeat;
     mask-size: contain;
@@ -143,11 +143,11 @@
 
   &__social-dot {
     position: absolute;
-    left: calc(100% + 6px);
+    left: calc(100% + #{fluid(4, 6)});
     top: 50%;
     transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
+    width: fluid(4, 6);
+    height: fluid(4, 6);
     border-radius: 50%;
     background-color: $color-accent;
     opacity: 0;
@@ -167,7 +167,7 @@
     transform: rotate(180deg);
     font-family: 'Karla';
     font-weight: 400;
-    font-size: rem(18);
+    font-size: fluid(14, 18);
     color: $color-base;
   }
 
@@ -178,9 +178,9 @@
   &__banner {
     position: absolute;
     left: 50%;
-    bottom: 77.69px;
+    bottom: fluid(40, 77.69);
     width: 110vw;
-    height: 62px;
+    height: fluid(48, 62);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -190,14 +190,14 @@
 
     @include respond-to('widescreen') {
       bottom: auto;
-      top: calc(50% + 320px);
+      top: calc(50% + #{fluid(200, 320, 1441, 1920)});
     }
   }
 
   &__banner-track {
     display: inline-flex;
     align-items: center;
-    padding: 12px 32px;
+    padding: fluid(8, 12) fluid(16, 32);
     white-space: nowrap;
 
     @media (prefers-reduced-motion: no-preference) {
@@ -207,16 +207,16 @@
 
   &__banner-item {
     font-family: 'Karla';
-    font-size: rem(32);
+    font-size: fluid(20, 32);
     font-weight: 400;
     color: $color-accent;
-    margin-right: 56px;
+    margin-right: fluid(24, 56);
   }
 
   &__banner-dot {
     color: $color-accent;
-    margin-right: 56px;
-    font-size: rem(32);
+    margin-right: fluid(24, 56);
+    font-size: fluid(20, 32);
   }
 }
 
