@@ -10,7 +10,7 @@ import { Button } from '../../../../shared/components/button/button';
 export class Hero {
   readonly bannerPhrases = [
     'Available for remote work',
-    'Frontend Developer',
+    'Fullstack Developer',
     'Based in Stuttgart',
     'Open to work',
   ];
