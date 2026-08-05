@@ -6,18 +6,18 @@
   &__inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding-inline: rem(96);
-    padding-bottom: rem(96);
+    padding-inline: fluid(24, 96);
+    padding-bottom: fluid(24, 96);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: rem(96);
+    gap: fluid(24, 96);
   }
 
   &__image {
     flex-shrink: 0;
-    width: rem(526);
-    border-radius: rem(30);
+    width: fluid(240, 526);
+    border-radius: fluid(16, 30);
     object-fit: cover;
   }
 
@@ -25,33 +25,33 @@
     font-family: 'Fira Code';
     font-weight: 700;
     color: $color-accent;
-    font-size: rem(64);
-    margin: 16px 0px 24px 32px;
+    font-size: fluid(32, 64);
+    margin: fluid(8, 16) 0px fluid(12, 24) fluid(16, 32);
   }
 
   &__intro {
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     line-height: 120%;
     text-align: justify;
-    margin: 0px 32px 32px 32px;
+    margin: 0px fluid(16, 32) fluid(16, 32) fluid(16, 32);
   }
 
   &__list {
     list-style: none;
-    margin: 0px 48px 32px 21px;
+    margin: 0px fluid(20, 48) fluid(16, 32) fluid(10, 21);
     display: flex;
     flex-direction: column;
-    gap: rem(16);
+    gap: fluid(10, 16);
     padding-inline-start: 0px;
   }
 
   &__item {
     display: flex;
     align-items: flex-start;
-    gap: rem(24);
+    gap: fluid(12, 24);
   }
 
   &__icon {
@@ -62,14 +62,14 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base80;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     line-height: 120%;
   }
 }
 
 app-card {
   width: 100%;
-  max-width: rem(540);
+  max-width: fluid(280, 540);
   align-self: flex-start;
-  margin-top: rem(200);
+  margin-top: fluid(60, 200);
 }
