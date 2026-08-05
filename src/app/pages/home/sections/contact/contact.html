@@ -22,7 +22,9 @@
           id="contact-name"
           type="text"
           class="contact__input"
-          [class.contact__input--error]="contactForm.name().touched() && contactForm.name().invalid()"
+          [class.contact__input--error]="
+            contactForm.name().touched() && contactForm.name().invalid()
+          "
           [placeholder]="
             contactForm.name().touched() && contactForm.name().invalid()
               ? contactForm.name().errors()[0].message
@@ -39,16 +41,24 @@
           type="email"
           class="contact__input"
           [class.contact__input--error]="
-            contactForm.email().touched() && contactForm.email().invalid() && !contactForm.email().value()
+            contactForm.email().touched() &&
+            contactForm.email().invalid() &&
+            !contactForm.email().value()
           "
           [placeholder]="
-            contactForm.email().touched() && contactForm.email().invalid() && !contactForm.email().value()
+            contactForm.email().touched() &&
+            contactForm.email().invalid() &&
+            !contactForm.email().value()
               ? contactForm.email().errors()[0].message
               : 'youremail@email.com'
           "
           [formField]="contactForm.email"
         />
-        @if (contactForm.email().touched() && contactForm.email().invalid() && contactForm.email().value()) {
+        @if (
+          contactForm.email().touched() &&
+          contactForm.email().invalid() &&
+          contactForm.email().value()
+        ) {
           <p class="contact__error">{{ contactForm.email().errors()[0].message }}</p>
         }
       </div>
@@ -61,7 +71,9 @@
         <textarea
           id="contact-message"
           class="contact__input contact__input--textarea"
-          [class.contact__input--error]="contactForm.message().touched() && contactForm.message().invalid()"
+          [class.contact__input--error]="
+            contactForm.message().touched() && contactForm.message().invalid()
+          "
           [placeholder]="
             contactForm.message().touched() && contactForm.message().invalid()
               ? contactForm.message().errors()[0].message

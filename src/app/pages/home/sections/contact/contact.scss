@@ -164,12 +164,59 @@
   }
 
   &__checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
     flex-shrink: 0;
-    width: rem(20);
-    height: rem(20);
-    margin-top: rem(2);
-    accent-color: $color-accent;
+    width: rem(18);
+    height: rem(18);
+    margin: rem(2) 0 0;
+    border: rem(2) solid $color-accent;
+    border-radius: rem(2);
+    background: transparent;
     cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(5);
+      height: rem(9);
+      border: solid $color-accent;
+      border-width: 0 rem(2) rem(2) 0;
+      transform: translate(-50%, -60%) rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    &:checked::before {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(24);
+      height: rem(24);
+      border-radius: 50%;
+      background: $color-accent30;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline: rem(2) solid $color-accent;
+      outline-offset: rem(2);
+    }
   }
 
   &__privacy-label {
@@ -184,7 +231,8 @@
     color: $color-accent;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline $color-accent;
+      color: $color-base;
     }
   }
 
@@ -202,7 +250,10 @@
     font-size: rem(18);
     color: $color-base;
     cursor: pointer;
-    transition: border-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    transition:
+      border-color 0.3s ease,
+      color 0.3s ease,
+      opacity 0.3s ease;
 
     &:not(:disabled):hover {
       border-color: $color-accent;
