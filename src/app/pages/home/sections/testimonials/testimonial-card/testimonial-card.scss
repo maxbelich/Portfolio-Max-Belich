@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: rem(24);
-  width: rem(480);
-  height: rem(240);
-  padding: rem(40);
+  gap: fluid(16, 24);
+  width: fluid(280, 480);
+  height: fluid(220, 240);
+  padding: fluid(24, 40);
   background: $color-accent30;
   border-radius: rem(16);
   border: rem(1) solid $color-accent;
@@ -22,18 +22,18 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     line-height: 120%;
   }
 
   &__author {
     display: flex;
     align-items: center;
-    gap: rem(16);
+    gap: fluid(12, 16);
   }
 
   &__line {
-    width: rem(120);
+    width: fluid(80, 120);
     height: rem(1);
     background: $color-base80;
   }
