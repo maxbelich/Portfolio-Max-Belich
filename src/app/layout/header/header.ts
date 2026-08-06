@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { HeaderOverlay } from './header-overlay/header-overlay';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, HeaderOverlay],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  menuOpen = signal(false);
+
+  toggleMenu() {
+    this.menuOpen.update((open) => !open);
+  }
+}

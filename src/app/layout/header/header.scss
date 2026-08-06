@@ -29,6 +29,44 @@
     display: flex;
     align-items: center;
     gap: fluid(16, 48);
+
+    @include respond-to(mobile, max) {
+      display: none;
+    }
+  }
+
+  &__menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: rem(8);
+
+    @include respond-to(mobile, max) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__menu-icon {
+    display: inline-block;
+    width: rem(28);
+    height: rem(28);
+    background-color: $color-base;
+    mask-image: url('/icons/ui/menu.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    -webkit-mask-image: url('/icons/ui/menu.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    transition: background-color 0.3s ease;
+  }
+
+  &__menu-toggle--active &__menu-icon {
+    background-color: $color-accent;
   }
 
   &__nav-list {

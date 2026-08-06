@@ -54,5 +54,17 @@
         <span class="header__logo-cursor"></span>
       </span>
     </a>
+
+    <button
+      type="button"
+      class="header__menu-toggle"
+      [class.header__menu-toggle--active]="menuOpen()"
+      (click)="toggleMenu()"
+      aria-label="Menu"
+    >
+      <span class="header__menu-icon" aria-hidden="true"></span>
+    </button>
   </div>
+
+  <app-header-overlay [open]="menuOpen()" (closed)="menuOpen.set(false)" />
 </header>

@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
     gap: fluid(24, 96);
+
+    @include respond-to(tablet, max) {
+      flex-direction: column;
+    }
   }
 
   &__image {
@@ -19,6 +23,10 @@
     width: fluid(240, 526);
     border-radius: fluid(16, 30);
     object-fit: cover;
+
+    @include respond-to(tablet, max) {
+      width: fluid(300, 440);
+    }
   }
 
   &__title {
@@ -72,4 +80,9 @@ app-card {
   max-width: fluid(280, 540);
   align-self: flex-start;
   margin-top: fluid(60, 200);
+
+  @include respond-to(tablet, max) {
+    align-self: center;
+    margin-top: fluid(24, 40);
+  }
 }

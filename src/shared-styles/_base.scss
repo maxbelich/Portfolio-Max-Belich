@@ -4,6 +4,10 @@ html {
   background-color: $color-gradient-black;
 }
 
+html.scroll-locked, html.scroll-locked body {
+  overflow: hidden;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
