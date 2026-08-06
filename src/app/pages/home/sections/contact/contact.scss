@@ -6,16 +6,16 @@
   &__inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: rem(96);
+    padding: fluid(24, 96);
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: rem(96);
+    gap: fluid(24, 96);
   }
 
   &__info {
     flex: 1;
-    max-width: rem(480);
+    max-width: fluid(280, 480);
   }
 
   &__eyebrow {
@@ -23,41 +23,41 @@
     color: $color-accent;
     font-family: 'Karla';
     font-weight: 700;
-    font-size: rem(24);
-    margin-bottom: rem(20);
+    font-size: fluid(18, 24);
+    margin-bottom: fluid(12, 20);
   }
 
   &__title {
     font-family: 'Fira Code';
     font-weight: 700;
     color: $color-accent;
-    font-size: rem(64);
-    margin-bottom: rem(24);
+    font-size: fluid(32, 64);
+    margin-bottom: fluid(16, 24);
   }
 
   &__subtitle {
     font-family: 'Fira Code';
     font-weight: 700;
     color: $color-base;
-    font-size: rem(24);
-    margin-bottom: rem(8);
+    font-size: fluid(18, 24);
+    margin-bottom: fluid(6, 8);
   }
 
   &__text {
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base80;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     line-height: 120%;
     text-align: justify;
-    margin-bottom: rem(24);
+    margin-bottom: fluid(16, 24);
   }
 
   &__cta {
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
   }
 
   &__accent {
@@ -67,17 +67,17 @@
 
   &__form {
     flex: 1;
-    max-width: rem(520);
+    max-width: fluid(300, 520);
     display: flex;
     flex-direction: column;
   }
 
   &__field {
     border-top: rem(1) solid $color-accent70;
-    padding-block: rem(16);
+    padding-block: fluid(12, 16);
     display: flex;
     flex-direction: column;
-    gap: rem(8);
+    gap: fluid(6, 8);
     transition: border-color 0.3s ease;
 
     &--last {
@@ -99,7 +99,7 @@
     font-family: 'Fira Code';
     font-weight: 700;
     color: $color-accent70;
-    font-size: rem(20);
+    font-size: fluid(16, 20);
     transition: color 0.3s ease;
   }
 
@@ -159,8 +159,8 @@
   &__privacy {
     display: flex;
     align-items: flex-start;
-    gap: rem(12);
-    margin-top: rem(24);
+    gap: fluid(8, 12);
+    margin-top: fluid(16, 24);
   }
 
   &__checkbox {
@@ -238,7 +238,7 @@
 
   &__submit {
     align-self: center;
-    margin-top: rem(48);
+    margin-top: fluid(24, 48);
     display: inline-flex;
     align-items: center;
     background: transparent;
@@ -247,7 +247,7 @@
     padding: 13px 32px;
     font-family: 'Karla';
     font-weight: 400;
-    font-size: rem(18);
+    font-size: fluid(16, 18);
     color: $color-base;
     cursor: pointer;
     transition:
