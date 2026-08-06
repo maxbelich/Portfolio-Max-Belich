@@ -13,10 +13,18 @@
   @return clamp(#{rem($min-px)}, #{rem($intersection-px)} + #{$slope * 100}vw, #{rem($max-px)});
 }
 
-@mixin respond-to($breakpoint) {
+@mixin respond-to($breakpoint, $direction: min) {
   @if map.has-key($breakpoints, $breakpoint) {
-    @media (min-width: map.get($breakpoints, $breakpoint)) {
-      @content;
+    $value: map.get($breakpoints, $breakpoint);
+
+    @if $direction == max {
+      @media (max-width: $value) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $value) {
+        @content;
+      }
     }
   } @else {
     @warn "Unbekannter Breakpoint: #{$breakpoint}";

@@ -163,16 +163,47 @@
   }
 
   &__social-email {
+    display: inline-flex;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-family: 'Karla';
     font-weight: 400;
     font-size: fluid(16, 18);
     color: $color-base;
+
+    @include respond-to(mobile, max) {
+      writing-mode: horizontal-tb;
+      transform: none;
+    }
   }
 
   &__social-email:hover {
     color: $color-accent;
+  }
+
+  &__social-email-icon {
+    display: none;
+    width: rem(20);
+    height: rem(20);
+    background-color: $color-accent;
+    mask-image: url('/icons/social/mail.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    -webkit-mask-image: url('/icons/social/mail.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+
+    @include respond-to(mobile, max) {
+      display: inline-block;
+    }
+  }
+
+  &__social-email-text {
+    @include respond-to(mobile, max) {
+      display: none;
+    }
   }
 
   &__banner {

@@ -1,0 +1,107 @@
+@use 'index' as *;
+
+.header-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba($color-gradient-black, 0.85);
+  z-index: 100;
+
+  &__content {
+    position: absolute;
+    top: rem(60);
+    right: rem(16);
+    width: min(70vw, rem(260));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+    background: $gradient-hero;
+    border: rem(1) solid $color-accent;
+    border-radius: rem(28);
+    padding: rem(24) rem(20);
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  &__link {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: rem(20);
+    color: $color-base;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__lang-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: rem(100);
+    height: rem(36);
+    border-radius: rem(18);
+    background: $color-accent10;
+    box-shadow: inset 0 0 0 rem(1) $color-accent;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__lang-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &__lang-knob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: rem(18);
+    background: $color-accent;
+    transition: transform 0.3s ease;
+  }
+
+  &__lang-option {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+    font-family: 'Fira Code';
+    font-weight: 500;
+    font-size: rem(16);
+    transition: color 0.3s ease;
+  }
+
+  &__lang-option--en {
+    color: $color-gradient-black;
+  }
+
+  &__lang-option--de {
+    color: $color-base80;
+  }
+
+  &__lang-input:checked ~ &__lang-knob {
+    transform: translateX(100%);
+  }
+
+  &__lang-input:checked ~ &__lang-option--en {
+    color: $color-base80;
+  }
+
+  &__lang-input:checked ~ &__lang-option--de {
+    color: $color-gradient-black;
+  }
+}

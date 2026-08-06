@@ -114,6 +114,10 @@
     width: fluid(180, 295);
     margin-left: fluid(24, 96);
     transition: top 0.3s ease;
+
+    @include respond-to(tablet, max) {
+      display: none;
+    }
   }
 
   &__preview-stripes {

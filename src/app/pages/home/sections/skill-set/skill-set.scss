@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
     gap: fluid(24, 96);
+
+    @include respond-to(tablet, max) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -66,6 +70,10 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: fluid(24, 48) fluid(36, 72);
+
+    @media (max-width: 1090px) {
+      gap: fluid(24, 48) fluid(16, 36);
+    }
   }
 
   &__item {
@@ -80,6 +88,11 @@
     width: rem(64);
     height: rem(64);
     transition: transform 0.3s ease;
+
+    @media (max-width: 1090px) {
+      width: rem(48);
+      height: rem(48);
+    }
   }
 
   &__label {
