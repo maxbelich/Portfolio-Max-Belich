@@ -74,12 +74,13 @@
     align-items: center;
     gap: fluid(12, 32);
     list-style: none;
+    padding-inline-start: fluid(0, 40, 500, 768);
   }
 
   &__nav-link {
     font-family: 'Fira Code';
     font-weight: 400;
-    font-size: fluid(14, 16);
+    font-size: rem(16);
     color: $color-base;
     text-decoration: none;
 
@@ -148,7 +149,7 @@
     text-align: center;
     font-family: 'Fira Code';
     font-weight: 500;
-    font-size: rem(13);
+    font-size: rem(16);
     transition: color 0.3s ease;
   }
 
@@ -178,6 +179,12 @@
     align-items: center;
     text-decoration: none;
     margin-right: fluid(0, 120);
+
+    @include respond-to(tablet, max) {
+      @include respond-to(mobile, min) {
+        margin-right: fluid(40, 48, 500, 768);
+      }
+    }
   }
 
   &__logo-mark {
@@ -204,6 +211,10 @@
     font-size: fluid(20, 28);
     color: $color-base;
     transition: width 0.45s steps(3, end);
+
+    @include respond-to(tablet, max) {
+      width: 3.1ch;
+    }
   }
 
   &__logo:hover &__logo-name {
