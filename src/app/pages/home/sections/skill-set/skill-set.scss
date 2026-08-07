@@ -1,7 +1,11 @@
 @use 'index' as *;
 
 .skill-set {
-  background: radial-gradient(rem(323) 43.85% at calc(50% - #{rem(702.4)}) 52.45%, rgba($color-gradient-green, 0.3) 0%, $color-gradient-black 100%);
+  background: radial-gradient(
+    rem(323) 43.85% at calc(50% - #{rem(702.4)}) 52.45%,
+    rgba($color-gradient-green, 0.3) 0%,
+    $color-gradient-black 100%
+  );
 
   &__inner {
     max-width: 1440px;
@@ -74,6 +78,10 @@
     @media (max-width: 1090px) {
       gap: fluid(24, 48) fluid(16, 36);
     }
+
+    @include respond-to(xs, max) {
+      grid-template-columns: repeat(3, auto);
+    }
   }
 
   &__item {
@@ -134,7 +142,6 @@
     transform: translateX(-33.5%);
     width: rem(196);
     aspect-ratio: 196 / 135;
-    background: url('/icons/ui/speech-bubble.svg') no-repeat center / 100% 100%;
     padding: rem(14) rem(20) rem(28) rem(20);
     text-align: center;
     opacity: 0;
@@ -144,6 +151,22 @@
       opacity 0.4s ease,
       visibility 0.4s ease;
     z-index: 5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('/icons/ui/speech-bubble.svg') no-repeat center / 100% 100%;
+      z-index: -1;
+    }
+
+    @include respond-to(xs, max) {
+      transform: translateX(-78%);
+
+      &::before {
+        transform: scaleX(-1);
+      }
+    }
   }
 
   &__item--special:hover &__tooltip {

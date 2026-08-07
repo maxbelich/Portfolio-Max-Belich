@@ -7,7 +7,7 @@
   background: transparent;
   border-radius: 999px;
   border: 1px solid;
-  padding: fluid(4, 13) fluid(4, 24);
+  padding: 13px 24px;
   font-family: 'Karla';
   font-weight: 400;
   font-size: rem(18);
@@ -15,6 +15,10 @@
   color: $color-base;
   text-decoration: none;
   transition: border-color 2s ease;
+
+  @include respond-to(xs, max) {
+    padding-inline: 12px;
+  }
 
   &:hover {
     border-color: $color-accent;

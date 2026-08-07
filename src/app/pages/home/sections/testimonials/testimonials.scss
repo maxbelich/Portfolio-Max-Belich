@@ -26,7 +26,7 @@ $testimonial-step: fluid(320, 544);
     height: $testimonial-card-height;
     overflow: hidden;
 
-    @include respond-to(testimonials, max) {
+    @include respond-to(narrow, max) {
       width: 100vw;
       margin-inline: calc(50% - 50vw);
       height: rem(300);
@@ -46,7 +46,7 @@ $testimonial-step: fluid(320, 544);
     pointer-events: none;
     z-index: 5;
 
-    @include respond-to(testimonials, max) {
+    @include respond-to(narrow, max) {
       top: rem(125);
       left: rem(8);
       transform: none;
@@ -61,7 +61,7 @@ $testimonial-step: fluid(320, 544);
     z-index: 4;
     pointer-events: none;
 
-    @include respond-to(testimonials, max) {
+    @include respond-to(narrow, max) {
       display: none;
     }
 
@@ -91,7 +91,7 @@ $testimonial-step: fluid(320, 544);
       transform: translate(calc(-50% - #{$testimonial-step}), -50%) scale(0.85);
       z-index: 2;
 
-      @include respond-to(testimonials, max) {
+      @include respond-to(narrow, max) {
         transform: translate(calc(-50% - (92.5vw - #{rem(22)})), -50%) scale(0.85);
       }
     }
@@ -100,7 +100,7 @@ $testimonial-step: fluid(320, 544);
       transform: translate(calc(-50% + #{$testimonial-step}), -50%) scale(0.85);
       z-index: 2;
 
-      @include respond-to(testimonials, max) {
+      @include respond-to(narrow, max) {
         transform: translate(calc(-50% + (92.5vw - #{rem(22)})), -50%) scale(0.85);
       }
     }
