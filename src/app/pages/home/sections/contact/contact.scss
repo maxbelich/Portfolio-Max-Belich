@@ -23,6 +23,7 @@
 
     @include respond-to(mobile, max) {
       width: 100%;
+      max-width: none;
     }
   }
 
@@ -81,6 +82,7 @@
 
     @include respond-to(mobile, max) {
       width: 100%;
+      max-width: none;
     }
   }
 
@@ -90,6 +92,8 @@
     display: flex;
     flex-direction: column;
     gap: fluid(6, 8);
+    padding-inline: fluid(16, 32);
+    margin-inline: fluid(-16, -32);
     transition: border-color 0.3s ease;
 
     &--last {
@@ -165,7 +169,7 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-error80;
-    font-size: rem(14);
+    font-size: rem(16);
   }
 
   &__privacy {
@@ -235,7 +239,7 @@
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base80;
-    font-size: rem(14);
+    font-size: rem(16);
     line-height: 120%;
   }
 

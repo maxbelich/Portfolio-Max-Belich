@@ -7,7 +7,7 @@
   background: transparent;
   border-radius: 999px;
   border: 1px solid;
-  padding: 13px 24px;
+  padding: fluid(4, 13) fluid(4, 24);
   font-family: 'Karla';
   font-weight: 400;
   font-size: rem(18);
