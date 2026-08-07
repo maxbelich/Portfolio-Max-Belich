@@ -36,6 +36,10 @@
     line-height: 120%;
     margin-bottom: fluid(24, 48);
     max-width: 35%;
+
+    @include respond-to(tablet, max) {
+      max-width: 100%;
+    }
   }
 
   &__content {
@@ -60,6 +64,15 @@
     border-top: rem(1) solid $color-accent;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    @include respond-to(projectsStack, max) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: auto;
+      gap: rem(4);
+      padding-block: fluid(12, 16);
+    }
 
     &:last-child {
       border-bottom: rem(1) solid $color-accent;
