@@ -16,7 +16,7 @@
   text-decoration: none;
   transition: border-color 2s ease;
 
-  @include respond-to(xs, max) {
+  @include respond-to(bp425, max) {
     padding-inline: 12px;
   }
 

@@ -16,7 +16,7 @@
     justify-content: center;
     gap: fluid(24, 96);
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       flex-direction: column;
     }
   }
@@ -79,7 +79,7 @@
       gap: fluid(24, 48) fluid(16, 36);
     }
 
-    @include respond-to(xs, max) {
+    @include respond-to(bp425, max) {
       grid-template-columns: repeat(3, auto);
     }
   }
@@ -160,7 +160,7 @@
       z-index: -1;
     }
 
-    @include respond-to(xs, max) {
+    @include respond-to(bp425, max) {
       transform: translateX(-78%);
 
       &::before {

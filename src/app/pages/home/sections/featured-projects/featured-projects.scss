@@ -37,7 +37,7 @@
     margin-bottom: fluid(24, 48);
     max-width: 35%;
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       max-width: 100%;
     }
   }
@@ -65,7 +65,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 
-    @include respond-to(projectsStack, max) {
+    @include respond-to(bp450, max) {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
@@ -128,7 +128,7 @@
     margin-left: fluid(24, 96);
     transition: top 0.3s ease;
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       display: none;
     }
   }

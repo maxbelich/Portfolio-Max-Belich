@@ -11,7 +11,7 @@
 .header {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
 
-  @include respond-to('widescreen') {
+  @include respond-to(bp1441) {
     background: none;
   }
   &__inner {
@@ -30,7 +30,7 @@
     align-items: center;
     gap: fluid(16, 48);
 
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       display: none;
     }
   }
@@ -42,7 +42,7 @@
     cursor: pointer;
     padding: rem(8);
 
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -180,8 +180,8 @@
     text-decoration: none;
     margin-right: fluid(0, 120);
 
-    @include respond-to(tablet, max) {
-      @include respond-to(mobile, min) {
+    @include respond-to(bp768, max) {
+      @include respond-to(bp500, min) {
         margin-right: fluid(40, 48, 500, 768);
       }
     }
@@ -212,7 +212,7 @@
     color: $color-base;
     transition: width 0.45s steps(3, end);
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       width: 3.1ch;
     }
   }

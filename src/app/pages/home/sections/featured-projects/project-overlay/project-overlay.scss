@@ -68,7 +68,7 @@
       opacity: 0;
     }
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       flex-direction: column;
       align-items: stretch;
       gap: rem(24);
@@ -81,7 +81,7 @@
     flex-shrink: 0;
     min-width: 0;
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       width: 100%;
     }
   }
@@ -215,7 +215,7 @@
     border-radius: rem(24);
     object-fit: cover;
 
-    @include respond-to(tablet, max) {
+    @include respond-to(bp768, max) {
       order: -1;
       align-self: center;
       width: fluid(300, 460);

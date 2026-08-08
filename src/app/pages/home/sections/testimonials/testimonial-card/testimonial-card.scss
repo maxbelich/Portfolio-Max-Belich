@@ -15,7 +15,7 @@
     background-color 0.5s ease,
     border-color 0.5s ease;
 
-  @include respond-to(narrow, max) {
+  @include respond-to(bp558, max) {
     width: calc(100vw - #{rem(32)});
     height: rem(300);
   }
@@ -31,27 +31,19 @@
     color: $color-base;
     font-size: fluid(16, 18);
     line-height: 120%;
-
-    @include respond-to(narrow, max) {
-      text-align: center;
-    }
   }
 
   &__author {
-    display: flex;
-    align-items: center;
-    gap: fluid(12, 16);
-
-    @include respond-to(narrow, max) {
-      align-items: flex-start;
-    }
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    column-gap: fluid(12, 16);
   }
 
   &__line {
-    width: fluid(80, 120);
     height: rem(1);
-    background: $color-base80;
     margin-top: rem(9);
+    background: $color-base80;
   }
 
   &__name {
@@ -59,10 +51,6 @@
     font-weight: 400;
     color: $color-base;
     font-size: rem(16);
-    white-space: nowrap;
-
-    @include respond-to(narrow, max) {
-      white-space: normal;
-    }
+    text-align: right;
   }
 }
