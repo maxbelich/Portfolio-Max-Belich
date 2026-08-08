@@ -9,7 +9,7 @@
     margin: 0 auto;
     padding: fluid(24, 48) fluid(24, 96);
 
-    @include respond-to(xxs, max) {
+    @include respond-to(bp320, max) {
       padding-inline: rem(8);
     }
     display: flex;
@@ -17,7 +17,7 @@
     justify-content: space-between;
     gap: fluid(16, 32);
 
-    @include respond-to(narrow, max) {
+    @include respond-to(bp558, max) {
       flex-wrap: wrap;
     }
   }
@@ -27,7 +27,7 @@
     flex-direction: column;
     gap: fluid(6, 8);
 
-    @include respond-to(narrow, max) {
+    @include respond-to(bp558, max) {
       order: 1;
     }
   }
@@ -68,7 +68,7 @@
     color: $color-accent;
     line-height: 120%;
 
-    @include respond-to(narrow, max) {
+    @include respond-to(bp558, max) {
       order: 3;
       width: 100%;
       text-align: center;
@@ -82,7 +82,7 @@
     align-items: flex-start;
     gap: fluid(6, 8);
 
-    @include respond-to(narrow, max) {
+    @include respond-to(bp558, max) {
       order: 2;
     }
   }

@@ -64,7 +64,7 @@
     align-items: center;
     gap: fluid(6, 8);
 
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       &::before {
         content: '';
         height: rem(15);
@@ -110,7 +110,7 @@
     gap: fluid(16, 27);
     width: fluid(20, 26);
 
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       &::before {
         content: '';
         height: rem(100);
@@ -185,7 +185,7 @@
     font-size: fluid(16, 18);
     color: $color-base;
 
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       writing-mode: horizontal-tb;
       transform: none;
     }
@@ -209,13 +209,13 @@
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
 
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       display: inline-block;
     }
   }
 
   &__social-email-text {
-    @include respond-to(mobile, max) {
+    @include respond-to(bp500, max) {
       display: none;
     }
   }
@@ -233,7 +233,7 @@
     backdrop-filter: blur(2.65px);
     transform: translateX(-50%) rotate(-3deg);
 
-    @include respond-to('widescreen') {
+    @include respond-to(bp1441) {
       bottom: auto;
       top: calc(50% + #{fluid(200, 320, 1441, 1920)});
     }
