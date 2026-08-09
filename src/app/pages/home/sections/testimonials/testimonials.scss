@@ -1,6 +1,7 @@
 @use 'index' as *;
 
 $testimonial-card-height: fluid(220, 240);
+$testimonial-card-width: fluid(280, 480);
 $testimonial-step: fluid(320, 544, 558);
 
 .testimonials {
@@ -28,7 +29,6 @@ $testimonial-step: fluid(320, 544, 558);
     width: 100%;
     max-width: rem(1440);
     height: $testimonial-card-height;
-    overflow: hidden;
 
     @include respond-to(bp558, max) {
       width: 100vw;
@@ -39,9 +39,9 @@ $testimonial-step: fluid(320, 544, 558);
 
   &__quote {
     position: absolute;
-    top: fluid(70, 121);
-    left: 53%;
-    transform: translateX(calc(-50% - #{fluid(162, 262)}));
+    top: 0;
+    left: calc(50% - #{$testimonial-card-width} / 2);
+    transform: translate(-55%, -35%);
     font-family: 'Karla';
     font-weight: 700;
     font-size: fluid(80, 140);
@@ -51,10 +51,16 @@ $testimonial-step: fluid(320, 544, 558);
     z-index: 5;
 
     @include respond-to(bp558, max) {
-      top: rem(125);
-      left: rem(8);
-      transform: none;
+      left: calc(50% - (100vw - #{rem(32)}) / 2);
+      transform: translate(-45%, -25%);
     }
+  }
+
+  &__clip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 
   &__fade {
