@@ -55,7 +55,14 @@
 
   &__link {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-base;
+      text-decoration: underline;
+      text-decoration-color: $color-accent;
+    }
   }
 
   &__privacy-link {
