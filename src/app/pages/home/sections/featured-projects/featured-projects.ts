@@ -1,4 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ProjectOverlay } from './project-overlay/project-overlay';
 import { PROJECTS } from '../../../../shared/data/projects.data';
 
@@ -8,7 +9,7 @@ const PREVIEW_ROW_OVERHANG = (PREVIEW_HEIGHT - ITEM_HEIGHT) / 2;
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [ProjectOverlay],
+  imports: [ProjectOverlay, TranslatePipe],
   templateUrl: './featured-projects.html',
   styleUrl: './featured-projects.scss',
 })

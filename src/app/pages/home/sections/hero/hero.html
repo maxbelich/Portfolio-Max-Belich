@@ -1,22 +1,22 @@
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__content">
-      <p class="hero__eyebrow">Fullstack Developer</p>
+      <p class="hero__eyebrow">{{ 'hero.eyebrow' | translate }}</p>
       <h1 class="hero__name">Max Belich</h1>
       <div class="hero__buttons">
-        <app-button [label]="'Check my work'" [target]="'featured-projects'"></app-button>
-        <app-button [label]="'Contact me'" [target]="'contact'"></app-button>
+        <app-button [label]="'hero.checkMyWork' | translate" [target]="'featured-projects'"></app-button>
+        <app-button [label]="'hero.contactMe' | translate" [target]="'contact'"></app-button>
       </div>
     </div>
     <div class="hero__scroll">
-      <a href="#about-me" class="hero__scroll-circle" aria-label="Nach unten scrollen">
+      <a href="#about-me" class="hero__scroll-circle" [attr.aria-label]="'common.scrollDown' | translate">
         <img src="/icons/ui/arrow-left.svg" alt="Bouncing Arrow" class="hero__scroll-arrow" />
       </a>
       <span class="hero__scroll-line"></span>
     </div>
     <div class="hero__social">
-      <a href="mailto:maxbelich@web.de" class="hero__social-email" aria-label="maxbelich@web.de">
-        <span class="hero__social-email-text">maxbelich@web.de</span>
+      <a href="mailto:max@maxbelich.de" class="hero__social-email" aria-label="max@maxbelich.de">
+        <span class="hero__social-email-text">max@maxbelich.de</span>
         <span class="hero__social-email-icon" aria-hidden="true"></span>
       </a>
       <div class="hero__social-links">
@@ -49,7 +49,7 @@
       @for (group of bannerGroups; track group) {
         @for (phrase of bannerPhrases; track phrase) {
           <span class="hero__banner-item" [attr.aria-hidden]="group === 0 ? null : true">{{
-            phrase
+            phrase | translate
           }}</span>
           <span class="hero__banner-dot" [attr.aria-hidden]="group === 0 ? null : true">•</span>
         }

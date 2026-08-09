@@ -2,7 +2,12 @@
   <div class="header__inner">
     <div class="header__left">
       <label class="header__lang-toggle">
-        <input type="checkbox" class="header__lang-input" />
+        <input
+          type="checkbox"
+          class="header__lang-input"
+          [checked]="isGerman()"
+          (change)="toggleLanguage()"
+        />
         <span class="header__lang-option header__lang-option--en">EN</span>
         <span class="header__lang-option header__lang-option--de">DE</span>
         <span class="header__lang-knob"></span>
@@ -12,24 +17,24 @@
         <ul class="header__nav-list">
           <li>
             <a routerLink="/" fragment="about-me" class="header__nav-link"
-              >About me<span class="header__nav-dot"></span
+              >{{ 'nav.aboutMe' | translate }}<span class="header__nav-dot"></span
             ></a>
           </li>
           <li>
             <a routerLink="/" fragment="skill-set" class="header__nav-link"
-              >Skills<span class="header__nav-dot"></span
+              >{{ 'nav.skills' | translate }}<span class="header__nav-dot"></span
             ></a>
           </li>
           <li>
             <a href="#featured-projects" class="header__nav-link"
-              >Projects<span class="header__nav-dot"></span
+              >{{ 'nav.projects' | translate }}<span class="header__nav-dot"></span
             ></a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <a href="/" class="header__logo" aria-label="Max Belich – Home">
+    <a href="/" class="header__logo" [attr.aria-label]="'nav.homeAriaLabel' | translate">
       <svg class="header__logo-mark" width="52" height="52" viewBox="0 0 100 100">
         <rect width="100" height="100" rx="24" fill="#3DCFB6" />
         <path

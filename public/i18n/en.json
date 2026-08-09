@@ -1,0 +1,117 @@
+{
+  "common": {
+    "menu": "Menu",
+    "close": "Close",
+    "scrollDown": "Scroll down"
+  },
+  "nav": {
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "homeAriaLabel": "Max Belich, Home"
+  },
+  "footer": {
+    "role": "Fullstack Developer",
+    "location": "Stuttgart, Germany",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "legalNotice": "Legal Notice"
+  },
+  "hero": {
+    "eyebrow": "Fullstack Developer",
+    "checkMyWork": "My work",
+    "contactMe": "Contact me",
+    "banner": {
+      "remote": "Available for remote work",
+      "role": "Fullstack Developer",
+      "location": "Stuttgart, Germany",
+      "openToWork": "Open to new opportunities"
+    }
+  },
+  "aboutMe": {
+    "eyebrow": "Who I am",
+    "title": "About me",
+    "intro": "Before turning programming into my career, I worked as an electronics technician for automation technology. That experience taught me how to narrow down problems systematically, understand technical relationships and work with precision. My interest in programming started out of curiosity when I was a teenager. Today, I enjoy building applications from the ground up and care just as much about clean code as I do about making them simple and intuitive to use.",
+    "location": "Based in Stuttgart, Germany, I enjoy working remotely and collaborating with teams across different time zones.",
+    "learning": "Learning new technologies and continuously improving my skills is an important part of how I work. Right now, I'm deepening my knowledge of Angular and TypeScript. Next, I want to expand my focus into backend technologies.",
+    "problemSolving": "Breaking problems into smaller parts and looking at them from different perspectives comes naturally to me. A solution is worth refining until it not only works, but also feels right. My approach to development is analytical and detail-oriented, with a strong focus on getting the small things right. Creativity, persistence and good collaboration matter just as much as clean and efficient code."
+  },
+  "skillSet": {
+    "eyebrow": "Technologies",
+    "title": "Skills",
+    "intro": "My current focus is modern frontend development with HTML, CSS, JavaScript, TypeScript and Angular. I care about responsive interfaces, clear structures and readable code. Through my projects, I have also gained experience working with APIs, Git and GitHub, as well as building larger applications in a structured way. My next focus is expanding my backend development skills.",
+    "ctaTitle": "You need",
+    "ctaAccent": "another skill?",
+    "ctaText": "I enjoy learning new technologies. If your project requires a skill I have not worked with yet, I'm happy to dive into the topic and build the knowledge I need.",
+    "ctaButton": "Let's talk",
+    "tooltipText": "What I'm excited to learn next"
+  },
+  "featuredProjects": {
+    "eyebrow": "Portfolio",
+    "title": "Featured Projects",
+    "intro": "My projects show how I turn requirements into working applications. Feel free to try them out and take a look at the code on GitHub.",
+    "overlay": {
+      "subtitle": "What is this project about?",
+      "github": "GitHub",
+      "liveTest": "Live Demo",
+      "nextProject": "Next project"
+    }
+  },
+  "projects": {
+    "join": {
+      "description": "A task manager inspired by the Kanban system. Tasks can be created, organized and moved between different sections using drag and drop. Users and categories can also be assigned to individual tasks. (Placeholder)"
+    },
+    "elPolloLoco": {
+      "description": "A 2D platformer built with an object-oriented JavaScript architecture. The project includes game logic, animations, collision detection, enemy behavior, collectible items and a final boss. The main focus was creating a clear class structure and applying object-oriented programming in practice."
+    },
+    "pokedex": {
+      "description": "A dynamic Pokédex web app powered by the PokéAPI. The application loads Pokémon data at runtime, processes API responses and provides search functionality along with detailed information for each Pokémon. Additional features such as lazy loading and dynamically loaded evolution data help create an efficient and responsive experience."
+    }
+  },
+  "testimonials": {
+    "title": "What my colleagues say about me",
+    "prevAriaLabel": "Previous testimonial",
+    "nextAriaLabel": "Next testimonial",
+    "goToAriaLabel": "Go to testimonial {{number}}",
+    "items": {
+      "weber": {
+        "role": "Team Partner",
+        "text": "Working with Max was straightforward and reliable from the start. He communicates clearly, works in a structured way and actively contributes to the team. (Placeholder)"
+      },
+      "krueger": {
+        "role": "Project Lead",
+        "text": "Max approaches problems calmly and systematically and stays focused even when tasks become more challenging. He works independently when learning new topics and is always willing to support others. (Placeholder)"
+      },
+      "berger": {
+        "role": "Frontend Developer",
+        "text": "Max works efficiently, reliably and with a clear structure. He follows through on agreements and completes tasks with care. I would gladly work with him again on another project. (Placeholder)"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together",
+    "subtitle": "Got a problem to solve?",
+    "text": "As a Fullstack Developer, I'm looking for my next challenge in a professional environment where I can contribute my current skills and continue to grow. A structured approach, quick learning and a genuine interest in new challenges are all part of how I work. If you're looking for someone to strengthen your team and think we could be a good fit, I'd be happy to hear from you.",
+    "ctaText": "Need a Fullstack Developer?",
+    "ctaAccent": "Let's talk!",
+    "nameLabel": "What's your name?",
+    "namePlaceholder": "Your name",
+    "emailLabel": "What's your email?",
+    "emailPlaceholder": "your-email@example.com",
+    "messageLabel": "How can I help you?",
+    "messagePlaceholder": "Hi Max, I'm interested in …",
+    "privacyTextBefore": "I've read the",
+    "privacyLink": "privacy policy",
+    "privacyTextAfter": "and agree to the processing of my data as described.",
+    "submit": "Send message",
+    "errors": {
+      "nameRequired": "Oops, your name is still missing.",
+      "emailRequired": "Oops, your email is still missing.",
+      "emailInvalid": "Oops, that doesn't look like a valid email address.",
+      "messageRequired": "Tell me briefly what you'd like to talk about.",
+      "privacyRequired": "Please accept the privacy policy."
+    }
+  }
+}

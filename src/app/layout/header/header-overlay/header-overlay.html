@@ -7,22 +7,27 @@
           fragment="about-me"
           class="header-overlay__link"
           (click)="closed.emit()"
-          >About me</a
+          >{{ 'nav.aboutMe' | translate }}</a
         >
         <a
           routerLink="/"
           fragment="skill-set"
           class="header-overlay__link"
           (click)="closed.emit()"
-          >Skills</a
+          >{{ 'nav.skills' | translate }}</a
         >
         <a href="#featured-projects" class="header-overlay__link" (click)="closed.emit()"
-          >Projects</a
+          >{{ 'nav.projects' | translate }}</a
         >
       </nav>
 
       <label class="header-overlay__lang-toggle">
-        <input type="checkbox" class="header-overlay__lang-input" />
+        <input
+          type="checkbox"
+          class="header-overlay__lang-input"
+          [checked]="isGerman()"
+          (change)="toggleLanguage()"
+        />
         <span class="header-overlay__lang-option header-overlay__lang-option--en">EN</span>
         <span class="header-overlay__lang-option header-overlay__lang-option--de">DE</span>
         <span class="header-overlay__lang-knob"></span>

@@ -5,7 +5,7 @@
         type="button"
         class="project-overlay__close"
         (click)="closed.emit()"
-        aria-label="Close"
+        [attr.aria-label]="'common.close' | translate"
       >
         <span class="project-overlay__close-icon" aria-hidden="true"></span>
       </button>
@@ -15,9 +15,9 @@
           <span class="project-overlay__index">{{ (index() + 1).toString().padStart(2, '0') }}</span>
           <h2 class="project-overlay__title">{{ project.title }}</h2>
 
-          <h3 class="project-overlay__subtitle">What is this project about?</h3>
-          @if (project.description) {
-            <p class="project-overlay__description">{{ project.description }}</p>
+          <h3 class="project-overlay__subtitle">{{ 'featuredProjects.overlay.subtitle' | translate }}</h3>
+          @if (project.descriptionKey) {
+            <p class="project-overlay__description">{{ project.descriptionKey | translate }}</p>
           }
 
           <ul class="project-overlay__tech">
@@ -42,7 +42,7 @@
                 rel="noopener noreferrer"
                 class="project-overlay__button"
               >
-                GitHub
+                {{ 'featuredProjects.overlay.github' | translate }}
                 <span class="project-overlay__button-arrow" aria-hidden="true"></span>
               </a>
             }
@@ -53,7 +53,7 @@
                 rel="noopener noreferrer"
                 class="project-overlay__button"
               >
-                Live Test
+                {{ 'featuredProjects.overlay.liveTest' | translate }}
                 <span class="project-overlay__button-arrow" aria-hidden="true"></span>
               </a>
             }
@@ -66,7 +66,7 @@
       </div>
 
       <button type="button" class="project-overlay__next" (click)="onNextClick()">
-        Next project
+        {{ 'featuredProjects.overlay.nextProject' | translate }}
         <img src="/icons/ui/arrow-forward-green.svg" alt="" />
       </button>
     </div>

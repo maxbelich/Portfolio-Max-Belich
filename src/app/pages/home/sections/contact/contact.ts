@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { form, required, email, validate, submit, FormField } from '@angular/forms/signals';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ContactMessage } from '../../../../shared/interfaces/contact-message';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormField, RouterLink],
+  imports: [FormField, RouterLink, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
@@ -18,13 +19,13 @@ export class Contact {
   });
 
   contactForm = form(this.contactModel, (schemaPath) => {
-    required(schemaPath.name, { message: 'Oops! it seems your name is missing ' });
-    required(schemaPath.email, { message: 'Hoppla! your email is required' });
-    email(schemaPath.email, { message: "Hoppla! that doesn't look like a valid email" });
-    required(schemaPath.message, { message: 'What do you need to develop?' });
+    required(schemaPath.name, { message: 'contact.errors.nameRequired' });
+    required(schemaPath.email, { message: 'contact.errors.emailRequired' });
+    email(schemaPath.email, { message: 'contact.errors.emailInvalid' });
+    required(schemaPath.message, { message: 'contact.errors.messageRequired' });
     validate(schemaPath.privacyAccepted, ({ value }) => {
       if (!value()) {
-        return { kind: 'privacyRequired', message: 'Please accept the privacy policy.' };
+        return { kind: 'privacyRequired', message: 'contact.errors.privacyRequired' };
       }
       return null;
     });

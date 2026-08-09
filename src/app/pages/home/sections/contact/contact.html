@@ -1,23 +1,23 @@
 <section class="contact" id="contact">
   <div class="contact__inner">
     <div class="contact__info">
-      <span class="contact__eyebrow">Contact me</span>
-      <h2 class="contact__title">Let's work together</h2>
-      <h3 class="contact__subtitle">Got a problem to solve?</h3>
+      <span class="contact__eyebrow">{{ 'contact.eyebrow' | translate }}</span>
+      <h2 class="contact__title">{{ 'contact.title' | translate }}</h2>
+      <h3 class="contact__subtitle">{{ 'contact.subtitle' | translate }}</h3>
 
       <p class="contact__text">
-        Encourage people to contact you and describe what role you are interested in. Show that you
-        will add value to their projects through your work.
+        {{ 'contact.text' | translate }}
       </p>
 
       <p class="contact__cta">
-        Need a Frontend developer? <span class="contact__accent">Let's talk!</span>
+        {{ 'contact.ctaText' | translate }}
+        <span class="contact__accent">{{ 'contact.ctaAccent' | translate }}</span>
       </p>
     </div>
 
     <form class="contact__form" (submit)="onSubmit($event)" novalidate>
       <div class="contact__field" [class.contact__field--active]="contactForm.name().dirty()">
-        <label for="contact-name" class="contact__label">What's your name?</label>
+        <label for="contact-name" class="contact__label">{{ 'contact.nameLabel' | translate }}</label>
         <input
           id="contact-name"
           type="text"
@@ -27,15 +27,15 @@
           "
           [placeholder]="
             contactForm.name().touched() && contactForm.name().invalid()
-              ? contactForm.name().errors()[0].message
-              : 'Your name goes here'
+              ? (contactForm.name().errors()[0].message | translate)
+              : ('contact.namePlaceholder' | translate)
           "
           [formField]="contactForm.name"
         />
       </div>
 
       <div class="contact__field" [class.contact__field--active]="contactForm.email().dirty()">
-        <label for="contact-email" class="contact__label">What's your email?</label>
+        <label for="contact-email" class="contact__label">{{ 'contact.emailLabel' | translate }}</label>
         <input
           id="contact-email"
           type="email"
@@ -49,8 +49,8 @@
             contactForm.email().touched() &&
             contactForm.email().invalid() &&
             !contactForm.email().value()
-              ? contactForm.email().errors()[0].message
-              : 'youremail@email.com'
+              ? (contactForm.email().errors()[0].message | translate)
+              : ('contact.emailPlaceholder' | translate)
           "
           [formField]="contactForm.email"
         />
@@ -59,7 +59,7 @@
           contactForm.email().invalid() &&
           contactForm.email().value()
         ) {
-          <p class="contact__error">{{ contactForm.email().errors()[0].message }}</p>
+          <p class="contact__error">{{ contactForm.email().errors()[0].message | translate }}</p>
         }
       </div>
 
@@ -67,7 +67,7 @@
         class="contact__field contact__field--last"
         [class.contact__field--active]="contactForm.message().dirty()"
       >
-        <label for="contact-message" class="contact__label">How can I help you?</label>
+        <label for="contact-message" class="contact__label">{{ 'contact.messageLabel' | translate }}</label>
         <textarea
           id="contact-message"
           class="contact__input contact__input--textarea"
@@ -76,8 +76,8 @@
           "
           [placeholder]="
             contactForm.message().touched() && contactForm.message().invalid()
-              ? contactForm.message().errors()[0].message
-              : 'Hello Max, I am interested in...'
+              ? (contactForm.message().errors()[0].message | translate)
+              : ('contact.messagePlaceholder' | translate)
           "
           [formField]="contactForm.message"
         ></textarea>
@@ -91,16 +91,17 @@
           [formField]="contactForm.privacyAccepted"
         />
         <label for="contact-privacy" class="contact__privacy-label">
-          I've read the <a routerLink="/datenschutz" class="contact__link">privacy policy</a> and
-          agree to the processing of my data as outlined.
+          {{ 'contact.privacyTextBefore' | translate }}
+          <a routerLink="/datenschutz" class="contact__link">{{ 'contact.privacyLink' | translate }}</a>
+          {{ 'contact.privacyTextAfter' | translate }}
         </label>
       </div>
       @if (contactForm.privacyAccepted().touched() && contactForm.privacyAccepted().invalid()) {
-        <p class="contact__error">{{ contactForm.privacyAccepted().errors()[0].message }}</p>
+        <p class="contact__error">{{ contactForm.privacyAccepted().errors()[0].message | translate }}</p>
       }
 
       <button type="submit" class="contact__submit" [disabled]="contactForm().invalid()">
-        Say Hello ;)
+        {{ 'contact.submit' | translate }}
       </button>
     </form>
   </div>

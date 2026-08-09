@@ -1,4 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { TestimonialCard } from './testimonial-card/testimonial-card';
 import { TESTIMONIALS } from '../../../../shared/data/testimonials.data';
 
@@ -6,7 +7,7 @@ type CarouselPosition = 'current' | 'prev' | 'next' | 'hidden';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [TestimonialCard],
+  imports: [TestimonialCard, TranslatePipe],
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss',
 })
