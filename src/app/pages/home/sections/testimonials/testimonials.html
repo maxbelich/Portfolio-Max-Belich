@@ -1,23 +1,25 @@
 <section class="testimonials">
-  <span class="testimonials__quote" aria-hidden="true">&ldquo;</span>
-
-  <h2 class="testimonials__title">What my colleagues say about me</h2>
+  <h2 class="testimonials__title">{{ 'testimonials.title' | translate }}</h2>
 
   <div class="testimonials__stage">
-    <div class="testimonials__fade testimonials__fade--left" aria-hidden="true"></div>
-    <div class="testimonials__fade testimonials__fade--right" aria-hidden="true"></div>
+    <span class="testimonials__quote" aria-hidden="true">&ldquo;</span>
 
-    @for (item of displayItems(); track item.testimonial.name) {
-      <app-testimonial-card
-        [testimonial]="item.testimonial"
-        [dimmed]="item.position !== 'current'"
-        class="testimonials__card"
-        [class.testimonials__card--current]="item.position === 'current'"
-        [class.testimonials__card--prev]="item.position === 'prev'"
-        [class.testimonials__card--next]="item.position === 'next'"
-        [class.testimonials__card--hidden]="item.position === 'hidden'"
-      />
-    }
+    <div class="testimonials__clip">
+      <div class="testimonials__fade testimonials__fade--left" aria-hidden="true"></div>
+      <div class="testimonials__fade testimonials__fade--right" aria-hidden="true"></div>
+
+      @for (item of displayItems(); track item.testimonial.name) {
+        <app-testimonial-card
+          [testimonial]="item.testimonial"
+          [dimmed]="item.position !== 'current'"
+          class="testimonials__card"
+          [class.testimonials__card--current]="item.position === 'current'"
+          [class.testimonials__card--prev]="item.position === 'prev'"
+          [class.testimonials__card--next]="item.position === 'next'"
+          [class.testimonials__card--hidden]="item.position === 'hidden'"
+        />
+      }
+    </div>
   </div>
 
   <div class="testimonials__controls">
@@ -25,7 +27,7 @@
       type="button"
       class="testimonials__arrow testimonials__arrow--prev"
       (click)="prev()"
-      aria-label="Previous testimonial"
+      [attr.aria-label]="'testimonials.prevAriaLabel' | translate"
     >
       <span class="testimonials__arrow-icon testimonials__arrow-icon--prev" aria-hidden="true"></span>
     </button>
@@ -37,7 +39,7 @@
           class="testimonials__dot"
           [class.testimonials__dot--active]="i === currentIndex()"
           (click)="goTo(i)"
-          [attr.aria-label]="'Go to testimonial ' + (i + 1)"
+          [attr.aria-label]="'testimonials.goToAriaLabel' | translate: { number: i + 1 }"
         >
           <span class="testimonials__dot-shape" aria-hidden="true"></span>
         </button>
@@ -48,7 +50,7 @@
       type="button"
       class="testimonials__arrow testimonials__arrow--next"
       (click)="next()"
-      aria-label="Next testimonial"
+      [attr.aria-label]="'testimonials.nextAriaLabel' | translate"
     >
       <span class="testimonials__arrow-icon testimonials__arrow-icon--next" aria-hidden="true"></span>
     </button>
