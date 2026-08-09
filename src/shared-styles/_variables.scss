@@ -1,6 +1,10 @@
 $color-gradient-black: #1c1c1c;
 $color-gradient-green: #08463b;
-$gradient-hero: linear-gradient(55.22deg, $color-gradient-black 36.26%, $color-gradient-green 93.28%);
+$gradient-hero: linear-gradient(
+  55.22deg,
+  $color-gradient-black 36.26%,
+  $color-gradient-green 93.28%
+);
 $color-accent: #3dcfb6;
 $color-accent10: rgba($color-accent, 0.1);
 $color-accent30: rgba($color-accent, 0.3);
@@ -15,7 +19,7 @@ $breakpoints: (
   bp1441: 1441px,
   bp768: 768px,
   bp558: 558px,
-  bp500: 500px,
+  bp510: 510px,
   bp450: 450px,
   bp425: 425px,
   bp320: 320px,
