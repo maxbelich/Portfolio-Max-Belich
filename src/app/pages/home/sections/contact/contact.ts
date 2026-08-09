@@ -45,7 +45,7 @@ export class Contact {
       try {
         await this.contactService.send(this.contactModel());
         this.status.set('success');
-        this.contactModel.set({ name: '', email: '', message: '', privacyAccepted: false });
+        this.contactForm().reset({ name: '', email: '', message: '', privacyAccepted: false });
       } catch {
         this.status.set('error');
       }

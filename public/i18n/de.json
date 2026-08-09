@@ -49,7 +49,7 @@
   },
   "featuredProjects": {
     "eyebrow": "Portfolio",
-    "title": "Ausgewählte Projekte",
+    "title": "Vorgestellte Projekte",
     "intro": "Meine Projekte zeigen, wie ich Anforderungen in funktionierende Anwendungen umsetze. Probier sie gerne selbst aus und schau dir den zugehörigen Code auf GitHub an.",
     "overlay": {
       "subtitle": "Worum geht es in diesem Projekt?",
