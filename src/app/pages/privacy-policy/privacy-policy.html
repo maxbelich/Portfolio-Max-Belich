@@ -1,1 +1,100 @@
-<p>privacy-policy works!</p>
+<section class="privacy-policy">
+  <div class="privacy-policy__inner">
+    <h1 class="privacy-policy__title" [attr.lang]="lang()">
+      {{ 'privacyPolicy.title' | translate }}
+    </h1>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.controller.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.controller.intro' | translate }}</p>
+      <p class="privacy-policy__text">
+        {{ 'privacyPolicy.controller.name' | translate }}<br />
+        {{ 'privacyPolicy.controller.street' | translate }}<br />
+        {{ 'privacyPolicy.controller.city' | translate }}<br />
+        {{ 'privacyPolicy.controller.country' | translate }}
+      </p>
+      <p class="privacy-policy__text">
+        {{ 'privacyPolicy.controller.emailLabel' | translate }}
+        <a href="mailto:max@maxbelich.de" class="privacy-policy__link">max@maxbelich.de</a>
+      </p>
+    </div>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.hosting.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.hosting.paragraph1' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.hosting.paragraph2' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.hosting.paragraph3' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.hosting.paragraph4' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.hosting.paragraph5' | translate }}</p>
+    </div>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.contact.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.contact.paragraph1' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.contact.paragraph2' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.contact.paragraph3' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.contact.paragraph4' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.contact.paragraph5' | translate }}</p>
+    </div>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.cookies.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.cookies.paragraph1' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.cookies.paragraph2' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.cookies.paragraph3' | translate }}</p>
+    </div>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.rights.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.rights.intro' | translate }}</p>
+      <ul class="privacy-policy__list">
+        <li class="privacy-policy__list-item">
+          {{ 'privacyPolicy.rights.itemAccess' | translate }}
+        </li>
+        <li class="privacy-policy__list-item">
+          {{ 'privacyPolicy.rights.itemRectification' | translate }}
+        </li>
+        <li class="privacy-policy__list-item">
+          {{ 'privacyPolicy.rights.itemErasure' | translate }}
+        </li>
+        <li class="privacy-policy__list-item">
+          {{ 'privacyPolicy.rights.itemRestriction' | translate }}
+        </li>
+        <li class="privacy-policy__list-item">
+          {{ 'privacyPolicy.rights.itemPortability' | translate }}
+        </li>
+        <li class="privacy-policy__list-item">
+          {{ 'privacyPolicy.rights.itemObjection' | translate }}
+        </li>
+      </ul>
+      <p class="privacy-policy__text">
+        {{ 'privacyPolicy.rights.contactHint' | translate }}
+        <a href="mailto:max@maxbelich.de" class="privacy-policy__link">max@maxbelich.de</a>.
+      </p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.rights.complaintIntro' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.rights.authorityIntro' | translate }}</p>
+      <p class="privacy-policy__text">
+        {{ 'privacyPolicy.rights.authorityName' | translate }}<br />
+        {{ 'privacyPolicy.rights.authorityStreet' | translate }}<br />
+        {{ 'privacyPolicy.rights.authorityCity' | translate }}<br />
+        {{ 'privacyPolicy.rights.authorityCountry' | translate }}
+      </p>
+    </div>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.security.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.security.paragraph' | translate }}</p>
+    </div>
+
+    <div class="privacy-policy__section">
+      <h2 class="privacy-policy__heading">{{ 'privacyPolicy.lastUpdated.heading' | translate }}</h2>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.lastUpdated.date' | translate }}</p>
+      <p class="privacy-policy__text">{{ 'privacyPolicy.lastUpdated.paragraph' | translate }}</p>
+    </div>
+
+    <a routerLink="/legal-notice" class="privacy-policy__privacy-link">
+      {{ 'privacyPolicy.legalNoticeLink' | translate }}
+      <img src="/icons/ui/arrow-forward-green.svg" alt="" />
+    </a>
+  </div>
+</section>

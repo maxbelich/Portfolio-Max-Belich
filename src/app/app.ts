@@ -14,12 +14,12 @@ export class App {
   protected readonly title = signal('Portfolio');
 
   private router = inject(Router);
-  isLegalNotice = signal(false);
+  isLegalPage = signal(false);
 
   constructor() {
     this.router.events.pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd)).subscribe(() => {
-      const active = this.router.url === '/legal-notice';
-      this.isLegalNotice.set(active);
+      const active = this.router.url === '/legal-notice' || this.router.url === '/privacy-policy';
+      this.isLegalPage.set(active);
       document.documentElement.classList.toggle('legal-notice-bg', active);
     });
   }
