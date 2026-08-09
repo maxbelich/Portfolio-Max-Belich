@@ -87,9 +87,10 @@
     transform: translateX(0.6px) rotate(-90deg);
     height: fluid(14, 20);
     width: fluid(10, 14);
+    animation: hero-scroll-bounce 1.6s infinite;
 
-    @media (prefers-reduced-motion: no-preference) {
-      animation: hero-scroll-bounce 1.6s infinite;
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
     }
   }
 
@@ -242,11 +243,12 @@
   &__banner-track {
     display: inline-flex;
     align-items: center;
-    padding: fluid(8, 12) fluid(16, 32);
+    padding: fluid(8, 12) 0;
     white-space: nowrap;
+    animation: hero-banner-scroll 40s linear infinite;
 
-    @media (prefers-reduced-motion: no-preference) {
-      animation: hero-banner-scroll 40s linear infinite;
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
     }
   }
 
