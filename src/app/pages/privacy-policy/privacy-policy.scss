@@ -68,9 +68,10 @@
   &__privacy-link {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: rem(8);
+    width: fit-content;
     margin-top: fluid(16, 24);
+    margin-left: auto;
     color: $color-accent;
     font-family: 'Karla';
     font-weight: 400;
