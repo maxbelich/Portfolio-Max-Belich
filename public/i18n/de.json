@@ -113,5 +113,22 @@
       "messageRequired": "Schreib mir kurz, worum es geht.",
       "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung."
     }
+  },
+  "legalNotice": {
+    "title": "Impressum",
+    "info": {
+      "heading": "Angaben gemäß § 5 DDG",
+      "name": "Max Belich",
+      "street": "Schneideräckerstraße 40",
+      "city": "70378 Stuttgart",
+      "country": "Deutschland",
+      "emailLabel": "E-Mail:"
+    },
+    "copyright": {
+      "heading": "Urheberrecht",
+      "paragraph1": "Die von mir auf dieser Website erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung außerhalb der gesetzlich zulässigen Grenzen bedarf meiner vorherigen schriftlichen Zustimmung, sofern nicht anders angegeben.",
+      "paragraph2": "Soweit Inhalte auf dieser Website nicht von mir erstellt wurden, werden die Rechte Dritter beachtet und entsprechende Inhalte als solche gekennzeichnet. Solltest du dennoch auf eine mögliche Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden einer Rechtsverletzung werde ich die betreffenden Inhalte unverzüglich entfernen."
+    },
+    "privacyLink": "Datenschutzerklärung"
   }
 }

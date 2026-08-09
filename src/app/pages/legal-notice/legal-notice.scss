@@ -1,0 +1,71 @@
+@use 'index' as *;
+
+.legal-notice {
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: fluid(120, 160) fluid(24, 96) fluid(48, 96);
+  }
+
+  &__title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    color: $color-accent;
+    font-size: fluid(32, 64);
+    margin-bottom: fluid(24, 40);
+  }
+
+  &__section {
+    margin-bottom: fluid(24, 32);
+  }
+
+  &__heading {
+    font-family: 'Karla';
+    font-weight: 700;
+    color: $color-base;
+    font-size: fluid(16, 19);
+    margin-bottom: fluid(8, 12);
+  }
+
+  &__text {
+    font-family: 'Karla';
+    font-weight: 400;
+    color: $color-accent;
+    font-size: fluid(14, 16);
+    line-height: 150%;
+    margin-bottom: fluid(8, 12);
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &__privacy-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: rem(8);
+    margin-top: fluid(16, 24);
+    color: $color-accent;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: fluid(14, 16);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    img {
+      width: rem(14);
+      height: rem(14);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: $color-base;
+
+      img {
+        transform: translateX(rem(4));
+      }
+    }
+  }
+}

@@ -3,6 +3,10 @@
 .footer {
   background: $color-gradient-black;
 
+  &--transparent {
+    background: transparent;
+  }
+
   &__inner {
     width: 100%;
     max-width: 1440px;

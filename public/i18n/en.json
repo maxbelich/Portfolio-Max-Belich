@@ -113,5 +113,22 @@
       "messageRequired": "Tell me briefly what you'd like to talk about.",
       "privacyRequired": "Please accept the privacy policy."
     }
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "info": {
+      "heading": "Information pursuant to Section 5 DDG",
+      "name": "Max Belich",
+      "street": "Schneideräckerstraße 40",
+      "city": "70378 Stuttgart",
+      "country": "Germany",
+      "emailLabel": "Email:"
+    },
+    "copyright": {
+      "heading": "Copyright",
+      "paragraph1": "The content and works created by me on this website are protected by German copyright law. Any reproduction, modification, distribution or other use beyond what is permitted by law requires my prior written consent, unless stated otherwise.",
+      "paragraph2": "Where content on this website was not created by me, third party rights are respected and such content is identified accordingly. If you become aware of a potential copyright infringement, please let me know. If an infringement is identified, I will remove the affected content promptly."
+    },
+    "privacyLink": "Privacy Policy"
   }
 }
