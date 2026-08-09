@@ -106,6 +106,9 @@
     "privacyLink": "privacy policy",
     "privacyTextAfter": "and agree to the processing of my data as described.",
     "submit": "Send message",
+    "submitting": "Sending…",
+    "submitSuccess": "Thanks! Your message has been sent.",
+    "submitError": "Something went wrong. Please try again later.",
     "errors": {
       "nameRequired": "Oops, your name is still missing.",
       "emailRequired": "Oops, your email is still missing.",

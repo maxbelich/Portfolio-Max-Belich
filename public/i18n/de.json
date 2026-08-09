@@ -106,6 +106,9 @@
     "privacyLink": "Datenschutzerklärung",
     "privacyTextAfter": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
     "submit": "Nachricht senden",
+    "submitting": "Wird gesendet…",
+    "submitSuccess": "Danke! Deine Nachricht wurde gesendet.",
+    "submitError": "Da ist etwas schiefgelaufen. Bitte versuch es später erneut.",
     "errors": {
       "nameRequired": "Hoppla, dein Name fehlt noch.",
       "emailRequired": "Hoppla, deine E-Mail fehlt noch.",

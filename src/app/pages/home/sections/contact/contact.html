@@ -100,9 +100,20 @@
         <p class="contact__error">{{ contactForm.privacyAccepted().errors()[0].message | translate }}</p>
       }
 
-      <button type="submit" class="contact__submit" [disabled]="contactForm().invalid()">
-        {{ 'contact.submit' | translate }}
+      <button
+        type="submit"
+        class="contact__submit"
+        [disabled]="contactForm().invalid() || status() === 'submitting'"
+      >
+        {{ (status() === 'submitting' ? 'contact.submitting' : 'contact.submit') | translate }}
       </button>
+
+      @if (status() === 'success') {
+        <p class="contact__status contact__status--success">{{ 'contact.submitSuccess' | translate }}</p>
+      }
+      @if (status() === 'error') {
+        <p class="contact__status contact__status--error">{{ 'contact.submitError' | translate }}</p>
+      }
     </form>
   </div>
 </section>

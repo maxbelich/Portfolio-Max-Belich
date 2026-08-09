@@ -168,8 +168,24 @@
   &__error {
     font-family: 'Karla';
     font-weight: 400;
-    color: $color-error80;
     font-size: rem(16);
+    color: $color-error80;
+  }
+
+  &__status {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: rem(16);
+    text-align: center;
+    margin-top: fluid(12, 16);
+
+    &--success {
+      color: $color-accent;
+    }
+
+    &--error {
+      color: $color-error80;
+    }
   }
 
   &__privacy {
