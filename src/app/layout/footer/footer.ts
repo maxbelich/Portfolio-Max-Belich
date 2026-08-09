@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -10,4 +10,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Footer {
   readonly currentYear = new Date().getFullYear();
+
+  transparent = input(false);
 }

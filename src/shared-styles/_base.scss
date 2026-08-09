@@ -4,6 +4,10 @@ html {
   background-color: $color-gradient-black;
 }
 
+html.legal-notice-bg {
+  background: $gradient-hero;
+}
+
 html.scroll-locked, html.scroll-locked body {
   overflow: hidden;
 }

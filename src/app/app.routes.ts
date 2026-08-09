@@ -9,11 +9,11 @@ export const routes: Routes = [
     component: Home,
   },
   {
-    path: 'impressum',
+    path: 'legal-notice',
     component: LegalNotice,
   },
   {
-    path: 'datenschutz',
+    path: 'privacy-policy',
     component: PrivacyPolicy,
   },
   {

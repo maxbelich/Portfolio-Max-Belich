@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" [class.footer--transparent]="transparent()">
   <div class="footer__inner">
     <div class="footer__brand">
       <a href="/" class="footer__logo" [attr.aria-label]="'nav.homeAriaLabel' | translate">
@@ -48,7 +48,7 @@
       <a href="mailto:max@maxbelich.de" class="footer__link"
         >{{ 'footer.email' | translate }}<span class="footer__dot"></span
       ></a>
-      <a routerLink="/impressum" class="footer__link"
+      <a routerLink="/legal-notice" class="footer__link"
         >{{ 'footer.legalNotice' | translate }}<span class="footer__dot"></span
       ></a>
     </nav>
