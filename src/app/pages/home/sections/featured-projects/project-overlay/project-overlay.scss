@@ -10,6 +10,10 @@
   z-index: 100;
   padding: rem(24);
 
+  @include respond-to(bp768, max) {
+    overflow-y: auto;
+  }
+
   &__content {
     position: relative;
     width: 100%;
@@ -21,6 +25,12 @@
     border: rem(1) solid $color-accent;
     border-radius: rem(32);
     padding: fluid(24, 48) fluid(24, 80);
+
+    @include respond-to(bp768, max) {
+      max-height: none;
+      overflow-y: visible;
+      margin: auto;
+    }
   }
 
   &__close {
@@ -120,11 +130,6 @@
     font-size: fluid(16, 18);
     line-height: 120%;
     margin-bottom: fluid(16, 32);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   &__tech {
@@ -184,6 +189,10 @@
       border-color 0.3s ease,
       color 0.3s ease;
 
+    @media (max-width: 334px) {
+      padding-inline: rem(12);
+    }
+
     &:hover {
       border-color: $color-accent;
       color: $color-accent;
@@ -220,7 +229,7 @@
       align-self: center;
       width: fluid(300, 460);
       max-height: none;
-      margin-top: rem(40);
+      margin-top: rem(64);
     }
   }
 
