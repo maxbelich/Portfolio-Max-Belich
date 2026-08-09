@@ -1,6 +1,8 @@
 <section class="legal-notice">
   <div class="legal-notice__inner">
-    <h1 class="legal-notice__title">{{ 'legalNotice.title' | translate }}</h1>
+    <h1 class="legal-notice__title" [attr.lang]="lang()">
+      {{ 'legalNotice.title' | translate }}
+    </h1>
 
     <div class="legal-notice__section">
       <h2 class="legal-notice__heading">{{ 'legalNotice.info.heading' | translate }}</h2>
@@ -12,7 +14,7 @@
       </p>
       <p class="legal-notice__text">
         {{ 'legalNotice.info.emailLabel' | translate }}
-        <a href="mailto:max@maxbelich.de" class="legal-notice__link">max&#64;maxbelich.de</a>
+        <a href="mailto:max@maxbelich.de" class="legal-notice__link">max@maxbelich.de</a>
       </p>
     </div>
 

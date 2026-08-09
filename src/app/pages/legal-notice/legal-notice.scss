@@ -2,9 +2,9 @@
 
 .legal-notice {
   &__inner {
-    max-width: 800px;
+    max-width: fluid(800, 1040);
     margin: 0 auto;
-    padding: fluid(120, 160) fluid(24, 96) fluid(48, 96);
+    padding: fluid(120, 160) fluid(24, 64) fluid(48, 96);
   }
 
   &__title {
@@ -13,6 +13,9 @@
     color: $color-accent;
     font-size: fluid(32, 64);
     margin-bottom: fluid(24, 40);
+    overflow-wrap: normal;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
   &__section {

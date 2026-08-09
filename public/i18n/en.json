@@ -130,5 +130,66 @@
       "paragraph2": "Where content on this website was not created by me, third party rights are respected and such content is identified accordingly. If you become aware of a potential copyright infringement, please let me know. If an infringement is identified, I will remove the affected content promptly."
     },
     "privacyLink": "Privacy Policy"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "controller": {
+      "heading": "1. Controller",
+      "intro": "The controller responsible for the processing of personal data on this website is:",
+      "name": "Max Belich",
+      "street": "Schneideräckerstraße 40",
+      "city": "70378 Stuttgart",
+      "country": "Germany",
+      "emailLabel": "Email:"
+    },
+    "hosting": {
+      "heading": "2. Hosting",
+      "paragraph1": "This website and my email account are hosted by Hetzner Online GmbH, Industriestraße 25, 91710 Gunzenhausen, Germany.",
+      "paragraph2": "When you visit this website, technical server log data is processed. This may include the requested page, date and time, browser information and an anonymised IP address.",
+      "paragraph3": "Server logs are stored for seven days by default and are then deleted.",
+      "paragraph4": "Processing is based on Art. 6(1)(f) GDPR. My legitimate interest is the secure and technically reliable operation of this website.",
+      "paragraph5": "A data processing agreement in accordance with Art. 28 GDPR is in place with Hetzner."
+    },
+    "contact": {
+      "heading": "3. Contact Form and Email",
+      "paragraph1": "If you contact me through the contact form, your name, email address and message are processed.",
+      "paragraph2": "The information is sent directly to my email account at Hetzner through a server-side PHP script. The form data is not additionally stored in a database.",
+      "paragraph3": "If your enquiry relates to a potential collaboration or steps taken before entering into a contract, processing is based on Art. 6(1)(b) GDPR. Other enquiries are processed on the basis of Art. 6(1)(f) GDPR.",
+      "paragraph4": "The same applies when you contact me directly by email.",
+      "paragraph5": "Contact enquiries and related emails are deleted no later than three months after the enquiry has been completed, unless legal retention requirements or other legitimate reasons require longer storage."
+    },
+    "cookies": {
+      "heading": "4. Cookies, Tracking and External Services",
+      "paragraph1": "This website does not use cookies, analytics tools, tracking technologies or marketing services.",
+      "paragraph2": "All fonts are hosted locally on my own web space. No connection to Google Fonts or other external font providers is established when the website loads.",
+      "paragraph3": "GitHub and LinkedIn are linked as external websites. A connection to these providers is only established when you open the respective link."
+    },
+    "rights": {
+      "heading": "5. Your Rights",
+      "intro": "Subject to the applicable legal requirements, you have the following rights regarding your personal data:",
+      "itemAccess": "right of access under Art. 15 GDPR",
+      "itemRectification": "right to rectification under Art. 16 GDPR",
+      "itemErasure": "right to erasure under Art. 17 GDPR",
+      "itemRestriction": "right to restriction of processing under Art. 18 GDPR",
+      "itemPortability": "right to data portability under Art. 20 GDPR",
+      "itemObjection": "right to object under Art. 21 GDPR",
+      "contactHint": "To exercise your rights, you can contact me at",
+      "complaintIntro": "You also have the right to lodge a complaint with a data protection supervisory authority.",
+      "authorityIntro": "For Baden-Württemberg:",
+      "authorityName": "The State Commissioner for Data Protection and Freedom of Information Baden-Württemberg",
+      "authorityStreet": "Heilbronner Straße 35",
+      "authorityCity": "70191 Stuttgart",
+      "authorityCountry": "Germany"
+    },
+    "security": {
+      "heading": "6. Data Security",
+      "paragraph": "This website uses an encrypted HTTPS connection with SSL/TLS to protect data transmitted between your browser and the server."
+    },
+    "lastUpdated": {
+      "heading": "7. Last Updated",
+      "date": "August 2026",
+      "paragraph": "This Privacy Policy may be updated if the functionality of this website or the applicable legal requirements change."
+    },
+    "legalNoticeLink": "Legal Notice"
   }
 }

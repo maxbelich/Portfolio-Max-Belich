@@ -130,5 +130,66 @@
       "paragraph2": "Soweit Inhalte auf dieser Website nicht von mir erstellt wurden, werden die Rechte Dritter beachtet und entsprechende Inhalte als solche gekennzeichnet. Solltest du dennoch auf eine mögliche Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden einer Rechtsverletzung werde ich die betreffenden Inhalte unverzüglich entfernen."
     },
     "privacyLink": "Datenschutzerklärung"
+  },
+  "privacyPolicy": {
+    "title": "Datenschutzerklärung",
+    "controller": {
+      "heading": "1. Verantwortlicher",
+      "intro": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+      "name": "Max Belich",
+      "street": "Schneideräckerstraße 40",
+      "city": "70378 Stuttgart",
+      "country": "Deutschland",
+      "emailLabel": "E-Mail:"
+    },
+    "hosting": {
+      "heading": "2. Hosting",
+      "paragraph1": "Diese Website und mein E-Mail-Postfach werden bei der Hetzner Online GmbH, Industriestraße 25, 91710 Gunzenhausen, Deutschland, betrieben.",
+      "paragraph2": "Beim Aufruf der Website werden technisch erforderliche Server-Logdaten verarbeitet. Dazu können insbesondere die aufgerufene Seite, Datum und Uhrzeit, Browserinformationen und eine anonymisierte IP-Adresse gehören.",
+      "paragraph3": "Die Server-Logs werden standardmäßig sieben Tage gespeichert und anschließend gelöscht.",
+      "paragraph4": "Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt im sicheren und technisch zuverlässigen Betrieb dieser Website.",
+      "paragraph5": "Mit Hetzner besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO."
+    },
+    "contact": {
+      "heading": "3. Kontaktformular und E-Mail",
+      "paragraph1": "Wenn du mich über das Kontaktformular kontaktierst, werden dein Name, deine E-Mail-Adresse und deine Nachricht verarbeitet.",
+      "paragraph2": "Die Angaben werden über ein serverseitiges PHP-Skript direkt an mein E-Mail-Postfach bei Hetzner gesendet. Eine zusätzliche Speicherung der Formulardaten in einer Datenbank findet nicht statt.",
+      "paragraph3": "Die Verarbeitung erfolgt zur Bearbeitung deiner Anfrage auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern es um eine mögliche Zusammenarbeit oder Vertragsanbahnung geht. Bei sonstigen Anfragen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.",
+      "paragraph4": "Das Gleiche gilt, wenn du mich direkt per E-Mail kontaktierst.",
+      "paragraph5": "Kontaktanfragen und die dazugehörigen E-Mails werden spätestens drei Monate nach Abschluss der Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten oder andere berechtigte Gründe für eine längere Speicherung bestehen."
+    },
+    "cookies": {
+      "heading": "4. Cookies, Tracking und externe Dienste",
+      "paragraph1": "Diese Website verwendet keine Cookies und keine Analyse-, Tracking- oder Marketing-Dienste.",
+      "paragraph2": "Die verwendeten Schriftarten werden lokal auf meinem eigenen Webspace bereitgestellt. Beim Laden der Website wird daher keine Verbindung zu Google Fonts oder anderen externen Schriftarten-Anbietern hergestellt.",
+      "paragraph3": "Links zu GitHub und LinkedIn sind normale externe Links. Eine Verbindung zu diesen Anbietern entsteht erst, wenn du den jeweiligen Link aufrufst."
+    },
+    "rights": {
+      "heading": "5. Deine Rechte",
+      "intro": "Du hast nach Maßgabe der gesetzlichen Voraussetzungen insbesondere das Recht auf:",
+      "itemAccess": "Auskunft gemäß Art. 15 DSGVO",
+      "itemRectification": "Berichtigung gemäß Art. 16 DSGVO",
+      "itemErasure": "Löschung gemäß Art. 17 DSGVO",
+      "itemRestriction": "Einschränkung der Verarbeitung gemäß Art. 18 DSGVO",
+      "itemPortability": "Datenübertragbarkeit gemäß Art. 20 DSGVO",
+      "itemObjection": "Widerspruch gemäß Art. 21 DSGVO",
+      "contactHint": "Zur Ausübung deiner Rechte kannst du mich unter",
+      "complaintIntro": "Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.",
+      "authorityIntro": "Für Baden-Württemberg:",
+      "authorityName": "Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg",
+      "authorityStreet": "Heilbronner Straße 35",
+      "authorityCity": "70191 Stuttgart",
+      "authorityCountry": "Deutschland"
+    },
+    "security": {
+      "heading": "6. Datensicherheit",
+      "paragraph": "Diese Website verwendet eine verschlüsselte HTTPS-Verbindung mit SSL/TLS zum Schutz der übertragenen Daten."
+    },
+    "lastUpdated": {
+      "heading": "7. Stand",
+      "date": "Stand: August 2026",
+      "paragraph": "Diese Datenschutzerklärung wird angepasst, wenn sich die Funktionen dieser Website oder die rechtlichen Anforderungen ändern."
+    },
+    "legalNoticeLink": "Impressum"
   }
 }

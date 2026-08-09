@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-legal-notice',
@@ -8,4 +8,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './legal-notice.html',
   styleUrl: './legal-notice.scss',
 })
-export class LegalNotice {}
+export class LegalNotice {
+  private translate = inject(TranslateService);
+  lang = computed(() => this.translate.currentLang());
+}
