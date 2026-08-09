@@ -7,7 +7,7 @@ export interface Project {
   id: string;
   title: string;
   techStack: ProjectTech[];
-  description?: string;
+  descriptionKey?: string;
   githubLink?: string;
   liveLink?: string;
   image?: string;

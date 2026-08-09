@@ -1,5 +1,5 @@
 export interface Testimonial {
     name: string;
-    role: string;
-    text: string;
+    roleKey: string;
+    textKey: string;
 }

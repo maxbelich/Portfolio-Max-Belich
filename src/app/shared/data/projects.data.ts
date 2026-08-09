@@ -11,8 +11,7 @@ export const PROJECTS: Project[] = [
       { name: 'CSS', icon: '/icons/tech/frontend/tech-css.svg' },
       { name: 'Firebase', icon: '/icons/tech/frontend/tech-firebase.svg' },
     ],
-    description:
-      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+    descriptionKey: 'projects.join.description',
     githubLink: 'https://github.com/maxbelich',
     liveLink: 'https://github.com/maxbelich',
     image: '/project-images/pokedex1.png',
@@ -25,8 +24,7 @@ export const PROJECTS: Project[] = [
       { name: 'HTML', icon: '/icons/tech/frontend/tech-html.svg' },
       { name: 'CSS', icon: '/icons/tech/frontend/tech-css.svg' },
     ],
-    description:
-      'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+    descriptionKey: 'projects.elPolloLoco.description',
     githubLink: 'https://github.com/maxbelich',
     liveLink: 'https://github.com/maxbelich',
     image: '/project-images/el-pollo-loco.png',
@@ -39,8 +37,7 @@ export const PROJECTS: Project[] = [
       { name: 'HTML', icon: '/icons/tech/frontend/tech-html.svg' },
       { name: 'CSS', icon: '/icons/tech/frontend/tech-css.svg' },
     ],
-    description:
-      'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+    descriptionKey: 'projects.pokedex.description',
     githubLink: 'https://github.com/maxbelich',
     liveLink: 'https://github.com/maxbelich',
     image: '/project-images/pokedex2.png',

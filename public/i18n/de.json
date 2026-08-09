@@ -1,0 +1,117 @@
+{
+  "common": {
+    "menu": "Menü",
+    "close": "Schließen",
+    "scrollDown": "Nach unten scrollen"
+  },
+  "nav": {
+    "aboutMe": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "homeAriaLabel": "Max Belich, Startseite"
+  },
+  "footer": {
+    "role": "Fullstack Developer",
+    "location": "Stuttgart, Deutschland",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "E-Mail",
+    "legalNotice": "Impressum"
+  },
+  "hero": {
+    "eyebrow": "Fullstack Developer",
+    "checkMyWork": "Meine Arbeit",
+    "contactMe": "Kontakt",
+    "banner": {
+      "remote": "Verfügbar für Remote-Arbeit",
+      "role": "Fullstack Developer",
+      "location": "Stuttgart, Deutschland",
+      "openToWork": "Offen für neue Möglichkeiten"
+    }
+  },
+  "aboutMe": {
+    "eyebrow": "Wer ich bin",
+    "title": "Über mich",
+    "intro": "Bevor ich das Programmieren zum Beruf gemacht habe, war ich als Elektroniker für Automatisierungstechnik tätig. Dort habe ich gelernt, Fehler systematisch einzugrenzen, Zusammenhänge zu verstehen und präzise zu arbeiten. Mit dem Programmieren habe ich schon als Jugendlicher aus Neugier angefangen. Heute entwickle ich am liebsten Anwendungen von Grund auf und achte dabei sowohl auf sauberen Code als auch auf eine einfache und intuitive Nutzung.",
+    "location": "Ich lebe in Stuttgart und arbeite gerne remote. Auch die Zusammenarbeit mit Teams in anderen Zeitzonen ist für mich kein Problem.",
+    "learning": "Neue Technologien zu lernen und meine Fähigkeiten kontinuierlich weiterzuentwickeln, gehört für mich einfach dazu. Aktuell vertiefe ich meine Kenntnisse in Angular und TypeScript. Als Nächstes möchte ich meinen Schwerpunkt um Backend-Technologien erweitern.",
+    "problemSolving": "Probleme zerlege ich gerne in kleinere Teile und betrachte sie aus verschiedenen Blickwinkeln. An einer Lösung feile ich so lange, bis sie nicht nur funktioniert, sondern sich auch richtig anfühlt. Dabei arbeite ich analytisch und detailorientiert. Mir ist wichtig, dass auch die kleinen Dinge stimmen. Kreativität, Ausdauer und gute Zusammenarbeit gehören für mich genauso zur Entwicklung wie sauberer und effizienter Code."
+  },
+  "skillSet": {
+    "eyebrow": "Technologien",
+    "title": "Skills",
+    "intro": "Mein aktueller Schwerpunkt liegt auf moderner Frontend-Entwicklung mit HTML, CSS, JavaScript, TypeScript und Angular. Dabei achte ich auf responsive Interfaces, klare Strukturen und verständlichen Code. Durch meine Projekte habe ich außerdem Erfahrung mit APIs, Git und GitHub sowie der strukturierten Entwicklung größerer Anwendungen gesammelt. Als nächsten Schwerpunkt baue ich meine Kenntnisse im Backend weiter aus.",
+    "ctaTitle": "Du brauchst",
+    "ctaAccent": "noch einen Skill?",
+    "ctaText": "Neue Technologien lerne ich gerne kennen. Wenn dein Projekt einen Skill benötigt, den ich noch nicht beherrsche, arbeite ich mich gezielt in das Thema ein.",
+    "ctaButton": "Lass uns reden",
+    "tooltipText": "Darauf freue ich mich als Nächstes"
+  },
+  "featuredProjects": {
+    "eyebrow": "Portfolio",
+    "title": "Ausgewählte Projekte",
+    "intro": "Meine Projekte zeigen, wie ich Anforderungen in funktionierende Anwendungen umsetze. Probier sie gerne selbst aus und schau dir den zugehörigen Code auf GitHub an.",
+    "overlay": {
+      "subtitle": "Worum geht es in diesem Projekt?",
+      "github": "GitHub",
+      "liveTest": "Live-Demo",
+      "nextProject": "Nächstes Projekt"
+    }
+  },
+  "projects": {
+    "join": {
+      "description": "Task-Manager nach dem Vorbild des Kanban-Systems. Aufgaben lassen sich erstellen, organisieren und per Drag-and-drop zwischen verschiedenen Bereichen verschieben. Zusätzlich können Nutzer und Kategorien zugewiesen werden. (Platzhalter)"
+    },
+    "elPolloLoco": {
+      "description": "2D-Jump-and-Run-Spiel mit objektorientierter JavaScript-Architektur. Das Projekt umfasst Spiellogik, Animationen, Kollisionsabfragen, Gegnerverhalten, sammelbare Objekte und einen Endgegner. Der Schwerpunkt lag auf einer klaren Klassenstruktur und der praktischen Anwendung objektorientierter Programmierung."
+    },
+    "pokedex": {
+      "description": "Dynamische Pokédex-Web-App auf Basis der PokéAPI. Die Anwendung lädt Pokémon-Daten zur Laufzeit, verarbeitet API-Antworten und bietet eine Suche sowie detaillierte Informationen zu den einzelnen Pokémon. Zusätzliche Funktionen wie Lazy Loading und dynamisch geladene Evolutionsdaten sorgen für eine effiziente und responsive Nutzung."
+    }
+  },
+  "testimonials": {
+    "title": "Was meine Kollegen über mich sagen",
+    "prevAriaLabel": "Vorherige Referenz",
+    "nextAriaLabel": "Nächste Referenz",
+    "goToAriaLabel": "Zu Referenz {{number}} wechseln",
+    "items": {
+      "weber": {
+        "role": "Teampartner",
+        "text": "Die Zusammenarbeit mit Max war von Anfang an unkompliziert und zuverlässig. Er kommuniziert klar, arbeitet strukturiert und bringt sich aktiv ins Team ein. (Platzhalter)"
+      },
+      "krueger": {
+        "role": "Projektleitung",
+        "text": "Max geht Probleme ruhig und strukturiert an und verliert auch bei schwierigeren Aufgaben nicht den Überblick. Er arbeitet sich selbstständig in neue Themen ein und unterstützt andere gerne. (Platzhalter)"
+      },
+      "berger": {
+        "role": "Frontend Developer",
+        "text": "Max arbeitet effizient, strukturiert und zuverlässig. Absprachen werden eingehalten und Aufgaben sorgfältig umgesetzt. Ich würde jederzeit wieder mit ihm an einem Projekt arbeiten. (Platzhalter)"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Lass uns zusammenarbeiten",
+    "subtitle": "Hast du ein Problem zu lösen?",
+    "text": "Meine nächste Herausforderung suche ich als Fullstack Developer in einem professionellen Umfeld, in dem ich meine bisherigen Kenntnisse einbringen und weiter ausbauen kann. Dabei arbeite ich strukturiert, lerne schnell und beschäftige mich gerne intensiv mit neuen Herausforderungen. Wenn du Verstärkung für dein Team suchst und glaubst, dass wir gut zusammenpassen, freue ich mich auf deine Nachricht.",
+    "ctaText": "Brauchst du einen Fullstack Developer?",
+    "ctaAccent": "Lass uns reden!",
+    "nameLabel": "Wie heißt du?",
+    "namePlaceholder": "Dein Name",
+    "emailLabel": "Wie lautet deine E-Mail?",
+    "emailPlaceholder": "deine-email@beispiel.com",
+    "messageLabel": "Wie kann ich dir helfen?",
+    "messagePlaceholder": "Hallo Max, ich interessiere mich für …",
+    "privacyTextBefore": "Ich habe die",
+    "privacyLink": "Datenschutzerklärung",
+    "privacyTextAfter": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+    "submit": "Nachricht senden",
+    "errors": {
+      "nameRequired": "Hoppla, dein Name fehlt noch.",
+      "emailRequired": "Hoppla, deine E-Mail fehlt noch.",
+      "emailInvalid": "Hoppla, das sieht nicht nach einer gültigen E-Mail-Adresse aus.",
+      "messageRequired": "Schreib mir kurz, worum es geht.",
+      "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung."
+    }
+  }
+}

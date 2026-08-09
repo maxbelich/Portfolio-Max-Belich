@@ -1,11 +1,12 @@
 import { Component, effect, HostListener, input, OnDestroy, output, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Project } from '../../../../../shared/interfaces/project';
 
 const TRANSITION_DURATION_MS = 200;
 
 @Component({
   selector: 'app-project-overlay',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './project-overlay.html',
   styleUrl: './project-overlay.scss',
 })
