@@ -64,7 +64,7 @@
     align-items: center;
     gap: fluid(6, 8);
 
-    @include respond-to(bp500, max) {
+    @include respond-to(bp510, max) {
       &::before {
         content: '';
         height: rem(15);
@@ -111,7 +111,7 @@
     gap: fluid(16, 27);
     width: fluid(20, 26);
 
-    @include respond-to(bp500, max) {
+    @include respond-to(bp510, max) {
       &::before {
         content: '';
         height: rem(100);
@@ -186,7 +186,7 @@
     font-size: fluid(16, 18);
     color: $color-base;
 
-    @include respond-to(bp500, max) {
+    @include respond-to(bp510, max) {
       writing-mode: horizontal-tb;
       transform: none;
     }
@@ -210,13 +210,13 @@
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
 
-    @include respond-to(bp500, max) {
+    @include respond-to(bp510, max) {
       display: inline-block;
     }
   }
 
   &__social-email-text {
-    @include respond-to(bp500, max) {
+    @include respond-to(bp510, max) {
       display: none;
     }
   }
