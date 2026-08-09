@@ -236,7 +236,7 @@
 
     @include respond-to(bp1441) {
       bottom: auto;
-      top: calc(50% + #{fluid(200, 320, 1441, 1920)});
+      top: calc(50% + #{rem(320)});
     }
   }
 

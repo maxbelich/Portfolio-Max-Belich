@@ -7,14 +7,15 @@
     max-width: 1440px;
     margin: 0 auto;
     padding-inline: fluid(24, 96);
-    padding-bottom: fluid(24, 96);
+    padding-block: fluid(24, 96);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: fluid(24, 96);
 
     @include respond-to(bp768, max) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -79,7 +80,7 @@ app-card {
   width: 100%;
   max-width: fluid(280, 540);
   align-self: flex-start;
-  margin-top: fluid(60, 200);
+  margin-top: fluid(32, 64);
 
   @include respond-to(bp768, max) {
     align-self: center;
