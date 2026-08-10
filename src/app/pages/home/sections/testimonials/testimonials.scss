@@ -1,8 +1,8 @@
 @use 'index' as *;
 
 $testimonial-card-height: fluid(220, 240);
-$testimonial-card-width: fluid(280, 480);
-$testimonial-step: fluid(320, 544, 558);
+$testimonial-card-width: fluid(260, 450);
+$testimonial-step: fluid(240, 400, 558);
 
 .testimonials {
   position: relative;
@@ -51,7 +51,7 @@ $testimonial-step: fluid(320, 544, 558);
     z-index: 5;
 
     @include respond-to(bp558, max) {
-      left: calc(50% - (100vw - #{rem(32)}) / 2);
+      left: calc(50% - (100vw - #{rem(48)}) / 2);
       transform: translate(-45%, -25%);
     }
   }
@@ -104,7 +104,7 @@ $testimonial-step: fluid(320, 544, 558);
       z-index: 2;
 
       @include respond-to(bp558, max) {
-        transform: translate(calc(-50% - (92.5vw - #{rem(22)})), -50%) scale(0.85);
+        transform: translate(calc(-50% - (90vw - #{rem(22)})), -50%) scale(0.85);
       }
     }
 
@@ -113,7 +113,7 @@ $testimonial-step: fluid(320, 544, 558);
       z-index: 2;
 
       @include respond-to(bp558, max) {
-        transform: translate(calc(-50% + (92.5vw - #{rem(22)})), -50%) scale(0.85);
+        transform: translate(calc(-50% + (90vw - #{rem(22)})), -50%) scale(0.85);
       }
     }
 
