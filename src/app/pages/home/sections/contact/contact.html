@@ -20,7 +20,9 @@
         <label for="contact-name" class="contact__label">{{ 'contact.nameLabel' | translate }}</label>
         <input
           id="contact-name"
+          name="name"
           type="text"
+          autocomplete="name"
           class="contact__input"
           [class.contact__input--error]="
             contactForm.name().touched() && contactForm.name().invalid()
@@ -38,7 +40,9 @@
         <label for="contact-email" class="contact__label">{{ 'contact.emailLabel' | translate }}</label>
         <input
           id="contact-email"
+          name="email"
           type="email"
+          autocomplete="email"
           class="contact__input"
           [class.contact__input--error]="
             contactForm.email().touched() &&

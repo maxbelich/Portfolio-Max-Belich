@@ -133,6 +133,14 @@
       color: $color-base80;
     }
 
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: $color-base80;
+      caret-color: $color-base80;
+      transition: background-color 600000s ease-in-out 0s;
+    }
+
     &--textarea {
       resize: none;
       field-sizing: content;
