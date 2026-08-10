@@ -17,10 +17,11 @@
 
     <form class="contact__form" (submit)="onSubmit($event)" novalidate>
       <div class="contact__field" [class.contact__field--active]="contactForm.name().dirty()">
-        <label for="contact-name" class="contact__label">{{ 'contact.nameLabel' | translate }}</label>
+        <label for="contact-name" class="contact__label">{{
+          'contact.nameLabel' | translate
+        }}</label>
         <input
           id="contact-name"
-          name="name"
           type="text"
           autocomplete="name"
           class="contact__input"
@@ -37,10 +38,11 @@
       </div>
 
       <div class="contact__field" [class.contact__field--active]="contactForm.email().dirty()">
-        <label for="contact-email" class="contact__label">{{ 'contact.emailLabel' | translate }}</label>
+        <label for="contact-email" class="contact__label">{{
+          'contact.emailLabel' | translate
+        }}</label>
         <input
           id="contact-email"
-          name="email"
           type="email"
           autocomplete="email"
           class="contact__input"
@@ -71,7 +73,9 @@
         class="contact__field contact__field--last"
         [class.contact__field--active]="contactForm.message().dirty()"
       >
-        <label for="contact-message" class="contact__label">{{ 'contact.messageLabel' | translate }}</label>
+        <label for="contact-message" class="contact__label">{{
+          'contact.messageLabel' | translate
+        }}</label>
         <textarea
           id="contact-message"
           class="contact__input contact__input--textarea"
@@ -99,13 +103,17 @@
         />
         <label for="contact-privacy" class="contact__privacy-label">
           {{ 'contact.privacyTextBefore' | translate }}
-          <a routerLink="/privacy-policy" class="contact__link">{{ 'contact.privacyLink' | translate }}</a>
+          <a routerLink="/privacy-policy" class="contact__link">{{
+            'contact.privacyLink' | translate
+          }}</a>
           {{ 'contact.privacyTextAfter' | translate }}
         </label>
       </div>
       <div class="contact__error-slot">
         @if (contactForm.privacyAccepted().touched() && contactForm.privacyAccepted().invalid()) {
-          <p class="contact__error">{{ contactForm.privacyAccepted().errors()[0].message | translate }}</p>
+          <p class="contact__error">
+            {{ contactForm.privacyAccepted().errors()[0].message | translate }}
+          </p>
         }
       </div>
 
@@ -118,10 +126,14 @@
       </button>
 
       @if (status() === 'success') {
-        <p class="contact__status contact__status--success">{{ 'contact.submitSuccess' | translate }}</p>
+        <p class="contact__status contact__status--success">
+          {{ 'contact.submitSuccess' | translate }}
+        </p>
       }
       @if (status() === 'error') {
-        <p class="contact__status contact__status--error">{{ 'contact.submitError' | translate }}</p>
+        <p class="contact__status contact__status--error">
+          {{ 'contact.submitError' | translate }}
+        </p>
       }
     </form>
   </div>
