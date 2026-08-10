@@ -85,6 +85,7 @@ app-card {
   margin-top: fluid(32, 64);
 
   @include respond-to(bp768, max) {
+    max-width: 100%;
     align-self: center;
     margin-top: fluid(24, 40);
   }

@@ -79,6 +79,11 @@
       gap: fluid(24, 48) fluid(16, 36);
     }
 
+    @include respond-to(bp768, max) {
+      width: 100%;
+      justify-content: space-between;
+    }
+
     @include respond-to(bp425, max) {
       grid-template-columns: repeat(3, auto);
     }
@@ -212,4 +217,8 @@
 app-card {
   width: 100%;
   max-width: fluid(280, 540);
+
+  @include respond-to(bp768, max) {
+    max-width: 100%;
+  }
 }

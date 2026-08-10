@@ -19,11 +19,9 @@
 
   &__info {
     flex: 1;
-    max-width: fluid(280, 480);
 
     @include respond-to(bp510, max) {
       width: 100%;
-      max-width: none;
     }
   }
 
