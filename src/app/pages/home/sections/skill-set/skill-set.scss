@@ -2,7 +2,7 @@
 
 .skill-set {
   background: radial-gradient(
-    rem(323) 43.85% at calc(50% - #{rem(702.4)}) 52.45%,
+    rem(323) 43.85% at max(0px, calc(50% - #{rem(702.4)})) 52.45%,
     rgba($color-gradient-green, 0.3) 0%,
     $color-gradient-black 100%
   );
