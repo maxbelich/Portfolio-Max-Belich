@@ -2,6 +2,7 @@ import { Component, effect, inject, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
+import { LanguageService } from './shared/services/language.service';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 
@@ -16,9 +17,12 @@ export class App {
 
   private router = inject(Router);
   private translate = inject(TranslateService);
+  private languageService = inject(LanguageService);
   isLegalPage = signal(false);
 
   constructor() {
+    this.languageService.restore();
+
     this.router.events.pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd)).subscribe(() => {
       const active = this.router.url === '/legal-notice' || this.router.url === '/privacy-policy';
       this.isLegalPage.set(active);
