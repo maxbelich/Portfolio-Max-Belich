@@ -3,9 +3,8 @@
 .testimonial-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: fluid(16, 24);
-  width: fluid(280, 480);
+  width: fluid(260, 450);
   height: fluid(220, 240);
   padding: fluid(24, 40);
   background: $color-accent30;
@@ -16,7 +15,7 @@
     border-color 0.5s ease;
 
   @include respond-to(bp558, max) {
-    width: calc(100vw - #{rem(32)});
+    width: calc(100vw - #{rem(48)});
     height: rem(300);
   }
 
@@ -26,6 +25,9 @@
   }
 
   &__text {
+    display: flex;
+    align-items: center;
+    flex: 1;
     font-family: 'Karla';
     font-weight: 400;
     color: $color-base;
