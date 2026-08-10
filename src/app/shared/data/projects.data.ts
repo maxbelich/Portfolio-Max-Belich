@@ -25,8 +25,8 @@ export const PROJECTS: Project[] = [
       { name: 'CSS', icon: '/icons/tech/frontend/tech-css.svg' },
     ],
     descriptionKey: 'projects.elPolloLoco.description',
-    githubLink: 'https://github.com/maxbelich',
-    liveLink: 'https://github.com/maxbelich',
+    githubLink: 'https://github.com/maxbelich/EL-Pollo-Loco',
+    liveLink: 'https://el-pollo-loco.maxbelich.de/',
     image: '/project-images/el-pollo-loco.png',
   },
   {
@@ -38,8 +38,8 @@ export const PROJECTS: Project[] = [
       { name: 'CSS', icon: '/icons/tech/frontend/tech-css.svg' },
     ],
     descriptionKey: 'projects.pokedex.description',
-    githubLink: 'https://github.com/maxbelich',
-    liveLink: 'https://github.com/maxbelich',
+    githubLink: 'https://github.com/maxbelich/Pokedex',
+    liveLink: 'https://pokedex.maxbelich.de/',
     image: '/project-images/pokedex2.png',
   },
 ];
