@@ -1,6 +1,7 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { LanguageService } from '../../shared/services/language.service';
 import { HeaderOverlay } from './header-overlay/header-overlay';
 
 @Component({
@@ -10,16 +11,16 @@ import { HeaderOverlay } from './header-overlay/header-overlay';
   styleUrl: './header.scss',
 })
 export class Header {
-  private translate = inject(TranslateService);
+  private readonly languageService = inject(LanguageService);
 
   menuOpen = signal(false);
-  isGerman = computed(() => this.translate.currentLang() === 'de');
+  isGerman = this.languageService.isGerman;
 
   toggleMenu() {
     this.menuOpen.update((open) => !open);
   }
 
   toggleLanguage() {
-    this.translate.use(this.isGerman() ? 'en' : 'de');
+    this.languageService.toggle();
   }
 }

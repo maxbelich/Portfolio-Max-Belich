@@ -1,6 +1,7 @@
-import { Component, computed, effect, HostListener, inject, input, OnDestroy, output } from '@angular/core';
+import { Component, effect, HostListener, inject, input, OnDestroy, output } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { LanguageService } from '../../../shared/services/language.service';
 
 @Component({
   selector: 'app-header-overlay',
@@ -9,14 +10,14 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   styleUrl: './header-overlay.scss',
 })
 export class HeaderOverlay implements OnDestroy {
-  private translate = inject(TranslateService);
+  private readonly languageService = inject(LanguageService);
 
   open = input<boolean>(false);
   closed = output<void>();
-  isGerman = computed(() => this.translate.currentLang() === 'de');
+  isGerman = this.languageService.isGerman;
 
   toggleLanguage() {
-    this.translate.use(this.isGerman() ? 'en' : 'de');
+    this.languageService.toggle();
   }
 
   constructor() {
