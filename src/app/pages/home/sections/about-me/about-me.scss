@@ -24,6 +24,8 @@
     width: fluid(240, 526);
     border-radius: fluid(16, 30);
     object-fit: cover;
+    mask-image: linear-gradient(to top, transparent 0%, black 22%, black 100%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 22%, black 100%);
 
     @include respond-to(bp768, max) {
       width: fluid(300, 440);
