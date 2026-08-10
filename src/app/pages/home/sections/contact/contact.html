@@ -88,6 +88,9 @@
           id="contact-privacy"
           type="checkbox"
           class="contact__checkbox"
+          [class.contact__checkbox--hovered]="checkboxHovered()"
+          (mouseenter)="checkboxHovered.set(true)"
+          (mouseleave)="checkboxHovered.set(false)"
           [formField]="contactForm.privacyAccepted"
         />
         <label for="contact-privacy" class="contact__privacy-label">
@@ -96,9 +99,11 @@
           {{ 'contact.privacyTextAfter' | translate }}
         </label>
       </div>
-      @if (contactForm.privacyAccepted().touched() && contactForm.privacyAccepted().invalid()) {
-        <p class="contact__error">{{ contactForm.privacyAccepted().errors()[0].message | translate }}</p>
-      }
+      <div class="contact__error-slot">
+        @if (contactForm.privacyAccepted().touched() && contactForm.privacyAccepted().invalid()) {
+          <p class="contact__error">{{ contactForm.privacyAccepted().errors()[0].message | translate }}</p>
+        }
+      </div>
 
       <button
         type="submit"
