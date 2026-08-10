@@ -17,6 +17,7 @@ export class Contact {
   private readonly contactService = inject(ContactService);
 
   protected readonly status = signal<SubmitStatus>('idle');
+  protected readonly checkboxHovered = signal(false);
 
   contactModel = signal<ContactMessage>({
     name: '',

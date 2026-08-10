@@ -169,7 +169,13 @@
     font-family: 'Karla';
     font-weight: 400;
     font-size: rem(16);
+    line-height: 120%;
     color: $color-error80;
+  }
+
+  &__error-slot {
+    margin-top: rem(8);
+    min-height: calc(#{rem(16)} * 1.2);
   }
 
   &__status {
@@ -241,7 +247,7 @@
       pointer-events: none;
     }
 
-    &:hover::after {
+    &--hovered::after {
       opacity: 1;
     }
 
