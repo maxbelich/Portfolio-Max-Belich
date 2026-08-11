@@ -2,6 +2,7 @@
 
 html {
   background-color: $color-gradient-black;
+  overflow-x: hidden;
 }
 
 html.legal-notice-bg {
@@ -28,6 +29,7 @@ html.scroll-locked, html.scroll-locked body {
   }
 }
 body {
+  overflow-x: hidden;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
