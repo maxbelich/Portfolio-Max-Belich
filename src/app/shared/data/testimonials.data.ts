@@ -12,8 +12,8 @@ export const TESTIMONIALS: Testimonial[] = [
     textKey: 'testimonials.items.kemiksiz.text',
   },
   {
-    name: 'J. Berger',
-    roleKey: 'testimonials.items.berger.role',
-    textKey: 'testimonials.items.berger.text',
+    name: 'Kamyar Zamanfar',
+    roleKey: 'testimonials.items.zamanfar.role',
+    textKey: 'testimonials.items.zamanfar.text',
   },
 ];

@@ -76,16 +76,16 @@
     "goToAriaLabel": "Zu Referenz {{number}} wechseln",
     "items": {
       "mayer": {
-        "role": "Teampartner",
+        "role": "Fullstack Developer",
         "text": "Max hat sich in unserem Projekt um das gesamte Supabase-Backend gekümmert und das mit einer Sorgfalt umgesetzt, die im Teamalltag nicht selbstverständlich ist. Technisch stimmte es, aber genauso wichtig: Man konnte sich auf ihn verlassen. Deadlines wurden eingehalten, Fragen schnell geklärt."
       },
       "kemiksiz": {
-        "role": "Teampartner",
+        "role": "Fullstack Developer",
         "text": "Ich habe mit Max Belich an einem gemeinsamen Projekt gearbeitet und dabei seine Zuverlässigkeit, sein Engagement und seine teamorientierte Arbeitsweise sehr geschätzt. Max bringt nicht nur fachliches Können, sondern auch eine positive und motivierende Einstellung ins Team ein. Ich würde jederzeit wieder mit ihm zusammenarbeiten."
       },
-      "berger": {
-        "role": "Frontend Developer",
-        "text": "Max arbeitet effizient, strukturiert und zuverlässig. Absprachen werden eingehalten und Aufgaben sorgfältig umgesetzt. Ich würde jederzeit wieder mit ihm an einem Projekt arbeiten. (Platzhalter)"
+      "zamanfar": {
+        "role": "Fullstack Developer",
+        "text": "Die Zusammenarbeit mit Max war für mich wirklich sehr angenehm. Er war geduldig, offen für verschiedene Ideen und hat Aufgaben zuverlässig verfolgt. Auch wenn er vieles selbstständig gemacht hat, war ihm die Zusammenarbeit im Team immer wichtig. Wenn etwas unklar war, hat er sich damit beschäftigt und versucht, eine gute Lösung zu finden. Ich würde jederzeit wieder gerne mit ihm zusammenarbeiten."
       }
     }
   },
