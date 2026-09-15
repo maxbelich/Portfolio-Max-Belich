@@ -21,7 +21,11 @@
 
     <ul class="skill-set__grid">
       @for (skill of skills; track skill.name; let last = $last) {
-        <li class="skill-set__item" [class.skill-set__item--special]="last">
+        <li
+          class="skill-set__item"
+          [class.skill-set__item--special]="last"
+          (mouseenter)="last && updateTooltipShift($event)"
+        >
           @if (last) {
             <svg
               class="skill-set__icon"
@@ -57,15 +61,22 @@
 
           @if (last) {
             <div class="skill-set__tooltip">
-              <p class="skill-set__tooltip-text">{{ 'skillSet.tooltipText' | translate }}</p>
-              <div class="skill-set__tooltip-skills">
-                <div class="skill-set__tooltip-skill">
-                  <img src="/icons/tech/colored-icons/Python.svg" alt="" />
-                  <span>Python</span>
-                </div>
-                <div class="skill-set__tooltip-skill">
-                  <img src="/icons/tech/colored-icons/React.svg" alt="" />
-                  <span>React</span>
+              <div class="skill-set__tooltip-tail"></div>
+              <div
+                class="skill-set__tooltip-box"
+                #tooltipBox
+                [style.--tooltip-shift.px]="tooltipShift()"
+              >
+                <p class="skill-set__tooltip-text">{{ 'skillSet.tooltipText' | translate }}</p>
+                <div class="skill-set__tooltip-skills">
+                  <div class="skill-set__tooltip-skill">
+                    <img src="/icons/tech/colored-icons/Python.svg" alt="" />
+                    <span>Python</span>
+                  </div>
+                  <div class="skill-set__tooltip-skill">
+                    <img src="/icons/tech/colored-icons/React.svg" alt="" />
+                    <span>React</span>
+                  </div>
                 </div>
               </div>
             </div>

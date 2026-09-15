@@ -9,5 +9,6 @@ export const SKILLS: Skill[] = [
   { name: 'Angular\nMaterial', icon: '/icons/tech/frontend/tech-angular-material.svg' },
   { name: 'Git', icon: '/icons/tech/frontend/tech-git.svg' },
   { name: 'REST-API', icon: '/icons/tech/frontend/tech-rest-api.svg' },
+  { name: 'Supabase', icon: '/icons/tech/frontend/tech-supabase.svg' },
   { name: 'Growth\nmindset', icon: '/icons/tech/frontend/tech-growth-mindset.svg' },
 ];

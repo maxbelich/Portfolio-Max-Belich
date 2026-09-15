@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, signal, viewChild } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Card } from '../../../../shared/components/card/card';
 import { Button } from '../../../../shared/components/button/button';
@@ -12,4 +12,27 @@ import { SKILLS } from '../../../../shared/data/skills.data';
 })
 export class SkillSet {
   skills = SKILLS;
+
+  tooltipBox = viewChild<ElementRef<HTMLElement>>('tooltipBox');
+  tooltipShift = signal(0);
+
+  updateTooltipShift(event: MouseEvent) {
+    const item = event.currentTarget as HTMLElement;
+    const box = this.tooltipBox()?.nativeElement;
+    if (!box) return;
+
+    const margin = 16;
+    const itemCenter = item.getBoundingClientRect().left + item.getBoundingClientRect().width / 2;
+    const idealLeft = itemCenter - box.offsetWidth / 2;
+    const idealRight = idealLeft + box.offsetWidth;
+
+    let shift = 0;
+    if (idealLeft < margin) {
+      shift = margin - idealLeft;
+    } else if (idealRight > window.innerWidth - margin) {
+      shift = window.innerWidth - margin - idealRight;
+    }
+
+    this.tooltipShift.set(shift);
+  }
 }

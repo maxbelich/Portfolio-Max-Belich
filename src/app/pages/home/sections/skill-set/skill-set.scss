@@ -142,13 +142,9 @@
 
   &__tooltip {
     position: absolute;
-    bottom: calc(100% - #{rem(28)});
-    left: 65%;
-    transform: translateX(-33.5%);
-    width: rem(196);
-    aspect-ratio: 196 / 135;
-    padding: rem(14) rem(20) rem(28) rem(20);
-    text-align: center;
+    bottom: calc(100% - #{rem(20)});
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -156,22 +152,35 @@
       opacity 0.4s ease,
       visibility 0.4s ease;
     z-index: 5;
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('/icons/ui/speech-bubble.svg') no-repeat center / 100% 100%;
-      z-index: -1;
-    }
+  &__item--special:hover &__tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
 
-    @include respond-to(bp425, max) {
-      transform: translateX(-78%);
+  &__tooltip-tail {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(26);
+    height: rem(15);
+    background: url('/icons/ui/speech-bubble-tail.svg') no-repeat center / 100% 100%;
+    z-index: 1;
+  }
 
-      &::before {
-        transform: scaleX(-1);
-      }
-    }
+  &__tooltip-box {
+    position: absolute;
+    bottom: rem(15);
+    left: 50%;
+    transform: translateX(calc(-50% + var(--tooltip-shift, 0px)));
+    width: rem(196);
+    padding: rem(14) rem(20) rem(20) rem(20);
+    background: $color-base;
+    border-radius: rem(16);
+    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    text-align: center;
   }
 
   &__item--special:hover &__tooltip {
