@@ -30,6 +30,6 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           localDir: 'dist/Portfolio/browser'
-          remoteDir: '/'
+          remoteDir: '/public_html'
           removeExtraFilesOnServer: true
           concurrency: 1
