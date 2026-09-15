@@ -2,14 +2,14 @@ import { Testimonial } from '../interfaces/testimonial';
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: 'A. Weber',
-    roleKey: 'testimonials.items.weber.role',
-    textKey: 'testimonials.items.weber.text',
+    name: 'Mathias Mayer/Join',
+    roleKey: 'testimonials.items.mayer.role',
+    textKey: 'testimonials.items.mayer.text',
   },
   {
-    name: 'S. Krüger',
-    roleKey: 'testimonials.items.krueger.role',
-    textKey: 'testimonials.items.krueger.text',
+    name: 'Muhammed Kemiksiz',
+    roleKey: 'testimonials.items.kemiksiz.role',
+    textKey: 'testimonials.items.kemiksiz.text',
   },
   {
     name: 'J. Berger',

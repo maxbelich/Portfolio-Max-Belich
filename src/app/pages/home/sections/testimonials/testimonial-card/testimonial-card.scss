@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: fluid(16, 24);
   width: fluid(260, 450);
-  height: fluid(220, 240);
+  height: fluid(300, 380);
   padding: fluid(24, 40);
   background: $color-accent30;
   border-radius: rem(16);
@@ -16,7 +16,7 @@
 
   @include respond-to(bp558, max) {
     width: calc(100vw - #{rem(48)});
-    height: rem(300);
+    height: rem(340);
   }
 
   &--dimmed {

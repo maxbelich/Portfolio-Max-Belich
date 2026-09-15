@@ -75,13 +75,13 @@
     "nextAriaLabel": "Nächste Referenz",
     "goToAriaLabel": "Zu Referenz {{number}} wechseln",
     "items": {
-      "weber": {
+      "mayer": {
         "role": "Teampartner",
-        "text": "Die Zusammenarbeit mit Max war von Anfang an unkompliziert und zuverlässig. Er kommuniziert klar, arbeitet strukturiert und bringt sich aktiv ins Team ein. (Platzhalter)"
+        "text": "Max hat sich in unserem Projekt um das gesamte Supabase-Backend gekümmert und das mit einer Sorgfalt umgesetzt, die im Teamalltag nicht selbstverständlich ist. Technisch stimmte es, aber genauso wichtig: Man konnte sich auf ihn verlassen. Deadlines wurden eingehalten, Fragen schnell geklärt."
       },
-      "krueger": {
-        "role": "Projektleitung",
-        "text": "Max geht Probleme ruhig und strukturiert an und verliert auch bei schwierigeren Aufgaben nicht den Überblick. Er arbeitet sich selbstständig in neue Themen ein und unterstützt andere gerne. (Platzhalter)"
+      "kemiksiz": {
+        "role": "Teampartner",
+        "text": "Ich habe mit Max Belich an einem gemeinsamen Projekt gearbeitet und dabei seine Zuverlässigkeit, sein Engagement und seine teamorientierte Arbeitsweise sehr geschätzt. Max bringt nicht nur fachliches Können, sondern auch eine positive und motivierende Einstellung ins Team ein. Ich würde jederzeit wieder mit ihm zusammenarbeiten."
       },
       "berger": {
         "role": "Frontend Developer",

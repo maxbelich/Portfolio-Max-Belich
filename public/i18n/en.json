@@ -75,14 +75,15 @@
     "nextAriaLabel": "Next testimonial",
     "goToAriaLabel": "Go to testimonial {{number}}",
     "items": {
-      "weber": {
+      "mayer": {
         "role": "Team Partner",
-        "text": "Working with Max was straightforward and reliable from the start. He communicates clearly, works in a structured way and actively contributes to the team. (Placeholder)"
+        "text": "Max took care of the entire Supabase backend in our project, handling it with a level of care that isn't a given in everyday teamwork. Technically it was solid, but just as important: you could rely on him. Deadlines were met, questions were resolved quickly."
       },
-      "krueger": {
-        "role": "Project Lead",
-        "text": "Max approaches problems calmly and systematically and stays focused even when tasks become more challenging. He works independently when learning new topics and is always willing to support others. (Placeholder)"
+      "kemiksiz": {
+        "role": "Team Partner",
+        "text": "I worked with Max Belich on a shared project and really valued his reliability, dedication and team-oriented way of working. Max brings not only technical skill but also a positive, motivating attitude to the team. I would gladly work with him again at any time."
       },
+
       "berger": {
         "role": "Frontend Developer",
         "text": "Max works efficiently, reliably and with a clear structure. He follows through on agreements and completes tasks with care. I would gladly work with him again on another project. (Placeholder)"
