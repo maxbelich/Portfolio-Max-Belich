@@ -32,3 +32,4 @@ jobs:
           localDir: 'dist/Portfolio/browser'
           remoteDir: '/'
           removeExtraFilesOnServer: true
+          concurrency: 1
