@@ -25,18 +25,24 @@ export class Testimonials {
     const prevIndex = (current - 1 + length) % length;
     const nextIndex = (current + 1) % length;
 
-    return this.testimonials.map((testimonial, index) => {
-      let position: CarouselPosition = 'hidden';
-      if (index === current) {
-        position = 'current';
-      } else if (index === prevIndex) {
-        position = 'prev';
-      } else if (index === nextIndex) {
-        position = 'next';
-      }
-      return { testimonial, position };
-    });
+    return this.testimonials.map((testimonial, index) => ({
+      testimonial,
+      position: this.getPosition(index, current, prevIndex, nextIndex),
+    }));
   });
+
+  /** Determines a testimonial's carousel role for the given indices. */
+  getPosition(
+    index: number,
+    current: number,
+    prevIndex: number,
+    nextIndex: number,
+  ): CarouselPosition {
+    if (index === current) return 'current';
+    if (index === prevIndex) return 'prev';
+    if (index === nextIndex) return 'next';
+    return 'hidden';
+  }
 
   /** Moves to the previous testimonial, wrapping around at the start. */
   prev() {

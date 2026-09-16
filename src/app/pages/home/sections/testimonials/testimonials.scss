@@ -1,6 +1,6 @@
 @use 'index' as *;
 
-$testimonial-card-height: fluid(300, 380);
+$testimonial-card-height: fluid(385, 410);
 $testimonial-card-width: fluid(260, 450);
 $testimonial-step: fluid(240, 400, 558);
 
@@ -33,7 +33,7 @@ $testimonial-step: fluid(240, 400, 558);
     @include respond-to(bp558, max) {
       width: 100vw;
       margin-inline: calc(50% - 50vw);
-      height: rem(340);
+      height: rem(390);
     }
   }
 
