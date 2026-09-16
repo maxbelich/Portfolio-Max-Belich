@@ -34,13 +34,13 @@
     "title": "About me",
     "intro": "Before turning programming into my career, I worked as an electronics technician for automation technology. That experience taught me how to narrow down problems systematically, understand technical relationships and work with precision. My interest in programming started out of curiosity when I was a teenager. Today, I enjoy building applications from the ground up and care just as much about clean code as I do about making them simple and intuitive to use.",
     "location": "Based in Stuttgart, Germany, I enjoy working remotely and collaborating with teams across different time zones.",
-    "learning": "Learning new technologies and continuously improving my skills is an important part of how I work. Right now, I'm deepening my knowledge of Angular and TypeScript. Next, I want to expand my focus into backend technologies.",
-    "problemSolving": "Breaking problems into smaller parts and looking at them from different perspectives comes naturally to me. A solution is worth refining until it not only works, but also feels right. My approach to development is analytical and detail-oriented, with a strong focus on getting the small things right. Creativity, persistence and good collaboration matter just as much as clean and efficient code."
+    "learning": "Learning new technologies and developing my skills is an important part of how I work. Right now, I'm deepening my knowledge of Angular and TypeScript while gaining more practical experience with backend technologies, databases, Supabase and PostgreSQL through my projects.",
+    "problemSolving": "Breaking problems into smaller parts and looking at them from different perspectives comes naturally to me. A solution is worth refining until it not only works, but also feels right. My approach to development is analytical and detail oriented, with attention to the small things that make a difference. Creativity, persistence and good collaboration matter just as much as clean and efficient code."
   },
   "skillSet": {
     "eyebrow": "Technologies",
     "title": "Skills",
-    "intro": "My current focus is modern frontend development with HTML, CSS, JavaScript, TypeScript and Angular. I care about responsive interfaces, clear structures and readable code. Through my projects, I have also gained experience working with APIs, Git and GitHub, as well as building larger applications in a structured way. My next focus is expanding my backend development skills.",
+    "intro": "My current focus is modern web development with HTML, CSS, JavaScript, TypeScript and Angular. I care about responsive interfaces, clear structures and readable code. Through my projects, I have also gained experience working with REST APIs, Git and GitHub, as well as practical backend and database experience with Supabase and PostgreSQL.",
     "ctaTitle": "You need",
     "ctaAccent": "another skill?",
     "ctaText": "I enjoy learning new technologies. If your project requires a skill I have not worked with yet, I'm happy to dive into the topic and build the knowledge I need.",
@@ -60,7 +60,7 @@
   },
   "projects": {
     "join": {
-      "description": "A task manager inspired by the Kanban system. Tasks can be created, organized and moved between different sections using drag and drop. Users and categories can also be assigned to individual tasks. (Placeholder)"
+      "description": "A task manager based on the Kanban system. Tasks can be created, organized and moved between workflow stages using drag and drop. Contacts, categories and subtasks can be assigned, while Supabase provides authentication, data storage and realtime updates."
     },
     "elPolloLoco": {
       "description": "A 2D platformer built with an object-oriented JavaScript architecture. The project includes game logic, animations, collision detection, enemy behavior, collectible items and a final boss. The main focus was creating a clear class structure and applying object-oriented programming in practice."
@@ -76,11 +76,11 @@
     "goToAriaLabel": "Go to testimonial {{number}}",
     "items": {
       "mayer": {
-        "role": "Team Partner",
+        "role": "Fullstack Developer",
         "text": "Max took care of the entire Supabase backend in our project, handling it with a level of care that isn't a given in everyday teamwork. Technically it was solid, but just as important: you could rely on him. Deadlines were met, questions were resolved quickly."
       },
       "kemiksiz": {
-        "role": "Team Partner",
+        "role": "Fullstack Developer",
         "text": "I worked with Max Belich on a shared project and really valued his reliability, dedication and team-oriented way of working. Max brings not only technical skill but also a positive, motivating attitude to the team. I would gladly work with him again at any time."
       },
 

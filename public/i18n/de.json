@@ -32,15 +32,15 @@
   "aboutMe": {
     "eyebrow": "Wer ich bin",
     "title": "Über mich",
-    "intro": "Bevor ich das Programmieren zum Beruf gemacht habe, war ich als Elektroniker für Automatisierungstechnik tätig. Dort habe ich gelernt, Fehler systematisch einzugrenzen, Zusammenhänge zu verstehen und präzise zu arbeiten. Mit dem Programmieren habe ich schon als Jugendlicher aus Neugier angefangen. Heute entwickle ich am liebsten Anwendungen von Grund auf und achte dabei sowohl auf sauberen Code als auch auf eine einfache und intuitive Nutzung.",
+    "intro": "Bevor ich das Programmieren zum Beruf gemacht habe, war ich als Elektroniker für Automatisierungstechnik tätig. Dort habe ich gelernt, Fehler systematisch einzugrenzen, technische Zusammenhänge zu verstehen und präzise zu arbeiten. Mit dem Programmieren habe ich schon als Jugendlicher aus Neugier angefangen. Heute entwickle ich am liebsten Anwendungen von Grund auf und achte dabei sowohl auf sauberen Code als auch auf eine einfache und intuitive Nutzung.",
     "location": "Ich lebe in Stuttgart und arbeite gerne remote. Auch die Zusammenarbeit mit Teams in anderen Zeitzonen ist für mich kein Problem.",
-    "learning": "Neue Technologien zu lernen und meine Fähigkeiten kontinuierlich weiterzuentwickeln, gehört für mich einfach dazu. Aktuell vertiefe ich meine Kenntnisse in Angular und TypeScript. Als Nächstes möchte ich meinen Schwerpunkt um Backend-Technologien erweitern.",
-    "problemSolving": "Probleme zerlege ich gerne in kleinere Teile und betrachte sie aus verschiedenen Blickwinkeln. An einer Lösung feile ich so lange, bis sie nicht nur funktioniert, sondern sich auch richtig anfühlt. Dabei arbeite ich analytisch und detailorientiert. Mir ist wichtig, dass auch die kleinen Dinge stimmen. Kreativität, Ausdauer und gute Zusammenarbeit gehören für mich genauso zur Entwicklung wie sauberer und effizienter Code."
+    "learning": "Neue Technologien zu lernen und meine Fähigkeiten weiterzuentwickeln, gehört für mich einfach dazu. Aktuell vertiefe ich meine Kenntnisse in Angular und TypeScript und sammle durch meine Projekte zunehmend praktische Erfahrung mit Backend Technologien, Datenbanken, Supabase und PostgreSQL.",
+    "problemSolving": "Probleme zerlege ich gerne in kleinere Teile und betrachte sie aus verschiedenen Blickwinkeln. An einer Lösung feile ich so lange, bis sie nicht nur funktioniert, sondern sich auch richtig anfühlt. Dabei arbeite ich analytisch und detailorientiert und achte darauf, dass auch die kleinen Dinge stimmen. Kreativität, Ausdauer und gute Zusammenarbeit gehören für mich genauso zur Entwicklung wie sauberer und effizienter Code."
   },
   "skillSet": {
     "eyebrow": "Technologien",
     "title": "Skills",
-    "intro": "Mein aktueller Schwerpunkt liegt auf moderner Frontend-Entwicklung mit HTML, CSS, JavaScript, TypeScript und Angular. Dabei achte ich auf responsive Interfaces, klare Strukturen und verständlichen Code. Durch meine Projekte habe ich außerdem Erfahrung mit APIs, Git und GitHub sowie der strukturierten Entwicklung größerer Anwendungen gesammelt. Als nächsten Schwerpunkt baue ich meine Kenntnisse im Backend weiter aus.",
+    "intro": "Mein aktueller Schwerpunkt liegt auf moderner Webentwicklung mit HTML, CSS, JavaScript, TypeScript und Angular. Dabei achte ich auf responsive Interfaces, klare Strukturen und verständlichen Code. Durch meine Projekte habe ich außerdem Erfahrung mit REST APIs, Git und GitHub sowie erste praktische Kenntnisse im Backend und im Umgang mit Supabase und PostgreSQL gesammelt.",
     "ctaTitle": "Du brauchst",
     "ctaAccent": "noch einen Skill?",
     "ctaText": "Neue Technologien lerne ich gerne kennen. Wenn dein Projekt einen Skill benötigt, den ich noch nicht beherrsche, arbeite ich mich gezielt in das Thema ein.",
@@ -60,7 +60,7 @@
   },
   "projects": {
     "join": {
-      "description": "Task-Manager nach dem Vorbild des Kanban-Systems. Aufgaben lassen sich erstellen, organisieren und per Drag-and-drop zwischen verschiedenen Bereichen verschieben. Zusätzlich können Nutzer und Kategorien zugewiesen werden. (Platzhalter)"
+      "description": "Ein Task Manager auf Basis des Kanban Systems. Aufgaben lassen sich erstellen, organisieren und per Drag and Drop zwischen Arbeitsphasen verschieben. Kontakte, Kategorien und Teilaufgaben können zugewiesen werden, während Supabase Authentifizierung, Datenhaltung und Echtzeit Updates übernimmt."
     },
     "elPolloLoco": {
       "description": "2D-Jump-and-Run-Spiel mit objektorientierter JavaScript-Architektur. Das Projekt umfasst Spiellogik, Animationen, Kollisionsabfragen, Gegnerverhalten, sammelbare Objekte und einen Endgegner. Der Schwerpunkt lag auf einer klaren Klassenstruktur und der praktischen Anwendung objektorientierter Programmierung."

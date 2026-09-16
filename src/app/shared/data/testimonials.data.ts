@@ -3,7 +3,7 @@ import { Testimonial } from '../interfaces/testimonial';
 /** Testimonials shown in the testimonials carousel. */
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: 'Mathias Mayer/Join',
+    name: 'Mathias Mayer',
     roleKey: 'testimonials.items.mayer.role',
     textKey: 'testimonials.items.mayer.text',
   },
