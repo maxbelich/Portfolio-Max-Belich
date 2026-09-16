@@ -9,10 +9,12 @@ interface MailResponse {
   error?: string;
 }
 
+/** Sends contact-form messages to the backend mail endpoint. */
 @Service()
 export class ContactService {
   private readonly http = inject(HttpClient);
 
+  /** Posts the message to {@link environment.mailEndpoint} and resolves with the mail result. */
   send(message: ContactMessage): Promise<MailResponse> {
     return firstValueFrom(this.http.post<MailResponse>(environment.mailEndpoint, message));
   }

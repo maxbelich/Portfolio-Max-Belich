@@ -1,5 +1,6 @@
 import { Testimonial } from '../interfaces/testimonial';
 
+/** Testimonials shown in the testimonials carousel. */
 export const TESTIMONIALS: Testimonial[] = [
   {
     name: 'Mathias Mayer/Join',

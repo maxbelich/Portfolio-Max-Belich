@@ -1,5 +1,6 @@
+/** Development environment configuration. */
 export const environment = {
-  // ng serve führt kein PHP aus. Für lokale Tests hier die volle URL zu deiner Live-Domain eintragen,
-  // z. B. 'https://deine-domain.de/mail.php' -- dank CORS-Header im Skript funktioniert das auch cross-origin.
+  // ng serve doesn't run PHP. For local testing, put the full URL to your live domain here,
+  // e.g. 'https://your-domain.com/mail.php' -- the script's CORS headers make this work cross-origin.
   mailEndpoint: 'https://maxbelich.de/mail.php',
 };

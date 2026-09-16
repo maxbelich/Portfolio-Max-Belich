@@ -4,6 +4,7 @@ import { Card } from '../../../../shared/components/card/card';
 import { Button } from '../../../../shared/components/button/button';
 import { SKILLS } from '../../../../shared/data/skills.data';
 
+/** Skill grid with a hover tooltip that repositions itself to stay on screen. */
 @Component({
   selector: 'app-skill-set',
   imports: [Card, Button, TranslatePipe],
@@ -16,6 +17,7 @@ export class SkillSet {
   tooltipBox = viewChild<ElementRef<HTMLElement>>('tooltipBox');
   tooltipShift = signal(0);
 
+  /** Shifts the tooltip horizontally so it stays within the viewport for the hovered skill. */
   updateTooltipShift(event: MouseEvent) {
     const item = event.currentTarget as HTMLElement;
     const box = this.tooltipBox()?.nativeElement;

@@ -1,5 +1,6 @@
 import { Skill } from '../interfaces/skill';
 
+/** Skills shown in the skill-set section. */
 export const SKILLS: Skill[] = [
   { name: 'HTML', icon: '/icons/tech/frontend/tech-html.svg' },
   { name: 'CSS', icon: '/icons/tech/frontend/tech-css.svg' },

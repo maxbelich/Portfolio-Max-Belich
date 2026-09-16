@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 
+/** Generic content card with an optional eyebrow label. */
 @Component({
   selector: 'app-card',
   imports: [],

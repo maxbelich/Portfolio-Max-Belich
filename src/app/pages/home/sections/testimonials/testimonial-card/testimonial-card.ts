@@ -2,6 +2,7 @@ import { Component, input } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Testimonial } from '../../../../../shared/interfaces/testimonial';
 
+/** Single testimonial card, optionally dimmed for non-active carousel slides. */
 @Component({
   selector: 'app-testimonial-card',
   imports: [TranslatePipe],

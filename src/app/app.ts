@@ -6,6 +6,10 @@ import { LanguageService } from './shared/services/language.service';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 
+/**
+ * Root component. Restores the saved language on startup, tracks navigation
+ * to toggle a legal-page background class, and keeps the `lang` attribute in sync.
+ */
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Header, Footer],
@@ -18,6 +22,8 @@ export class App {
   private router = inject(Router);
   private translate = inject(TranslateService);
   private languageService = inject(LanguageService);
+
+  /** True while the legal-notice or privacy-policy route is active. */
   isLegalPage = signal(false);
 
   constructor() {

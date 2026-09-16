@@ -5,8 +5,10 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { ContactMessage } from '../../../../shared/interfaces/contact-message';
 import { ContactService } from '../../../../shared/services/contact.service';
 
+/** Submission lifecycle of the contact form. */
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
 
+/** Contact section with a validated form that sends messages via {@link ContactService}. */
 @Component({
   selector: 'app-contact',
   imports: [FormField, RouterLink, TranslatePipe],
@@ -39,6 +41,7 @@ export class Contact {
     });
   });
 
+  /** Submits the contact form and updates {@link status} with the result. */
   async onSubmit(event: Event): Promise<void> {
     event.preventDefault();
     this.status.set('submitting');
