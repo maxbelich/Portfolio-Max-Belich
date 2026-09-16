@@ -154,7 +154,8 @@
     z-index: 5;
   }
 
-  &__item--special:hover &__tooltip {
+  &__item--special:hover &__tooltip,
+  &__item--special:focus &__tooltip {
     opacity: 1;
     visibility: visible;
   }
