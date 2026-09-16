@@ -1,5 +1,6 @@
 import { Project } from '../interfaces/project';
 
+/** Portfolio projects shown in the featured-projects section. */
 export const PROJECTS: Project[] = [
   {
     id: 'join',

@@ -1,4 +1,5 @@
+/** Production environment configuration. */
 export const environment = {
-  // Produktion: Frontend und mail.php liegen auf derselben Hetzner-Domain -> relativer Pfad reicht.
+  // Production: frontend and mail.php live on the same Hetzner domain, so a relative path is enough.
   mailEndpoint: '/mail.php',
 };

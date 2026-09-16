@@ -2,8 +2,10 @@ import { Component, effect, HostListener, input, OnDestroy, output, signal } fro
 import { TranslatePipe } from '@ngx-translate/core';
 import { Project } from '../../../../../shared/interfaces/project';
 
+/** Debounce window so rapid clicks can't double-trigger the next-project transition. */
 const TRANSITION_DURATION_MS = 200;
 
+/** Full-screen overlay showing one project's details; locks page scroll while open. */
 @Component({
   selector: 'app-project-overlay',
   imports: [TranslatePipe],
@@ -24,10 +26,12 @@ export class ProjectOverlay implements OnDestroy {
     });
   }
 
+  /** Removes the scroll lock in case the overlay unmounts while still open. */
   ngOnDestroy() {
     document.documentElement.classList.remove('scroll-locked');
   }
 
+  /** Closes the overlay when Escape is pressed while a project is shown. */
   @HostListener('document:keydown.escape')
   onEscape() {
     if (this.project()) {
@@ -35,6 +39,7 @@ export class ProjectOverlay implements OnDestroy {
     }
   }
 
+  /** Emits {@link next} after a short delay, ignoring clicks while already transitioning. */
   onNextClick() {
     if (this.isTransitioning()) {
       return;

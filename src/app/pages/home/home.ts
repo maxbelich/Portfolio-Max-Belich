@@ -6,6 +6,7 @@ import { FeaturedProjects } from './sections/featured-projects/featured-projects
 import { Contact } from './sections/contact/contact';
 import { Testimonials } from './sections/testimonials/testimonials';
 
+/** Home page; composes all landing-page sections. */
 @Component({
   selector: 'app-home',
   imports: [Hero, AboutMe, SkillSet, FeaturedProjects, Testimonials, Contact],
