@@ -24,13 +24,18 @@ Personal portfolio website showcasing my projects, skills, and experience as a d
 
 ## Getting Started
 
+Clone the repository and start the local development server:
+
 ```bash
+git clone https://github.com/maxbelich/Portfolio-Max-Belich.git
+cd Portfolio-Max-Belich
 npm install
 npm start
-npm run build
-npm test
 ```
-
+Then open:
+```bash
+http://localhost:4200
+```
 ## Project Structure
 
 ```text
