@@ -24,7 +24,9 @@
         <li
           class="skill-set__item"
           [class.skill-set__item--special]="last"
+          [attr.tabindex]="last ? 0 : null"
           (mouseenter)="last && updateTooltipShift($event)"
+          (focus)="last && updateTooltipShift($event)"
         >
           @if (last) {
             <svg
