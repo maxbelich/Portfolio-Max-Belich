@@ -37,7 +37,6 @@ The application uses standalone Angular components and signals, supports English
 - **TypeScript**
 - **SCSS**
 - **ngx-translate** - English / German internationalization
-- **Vitest** - unit testing
 - **PHP** - server-side contact form
 - **GitHub Actions** - automated deployment
 - **Hetzner** - production hosting
